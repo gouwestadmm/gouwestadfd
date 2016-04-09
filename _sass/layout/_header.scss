@@ -1,0 +1,31 @@
+
+
+// 
+// HERO-HEADER
+// default styling for the hero header
+
+.hero-header{
+	width: 100vw;
+	min-height: 90vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: $gray-lighter;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+// content alignment options
+.hero-bottom-content{
+	align-items: flex-end;
+}
+
+// card is the default holder for hero content
+.hero-card{
+	margin: $element-spacer;
+
+	.card-block{
+		display: flex;
+	}
+}

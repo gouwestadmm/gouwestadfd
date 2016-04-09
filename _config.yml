@@ -1,0 +1,30 @@
+# Jekyll configuration precedence:
+# 1. Gruntfile task
+# 2. config.build.yml
+# 3. config.yml
+
+name: gouwestadfd 
+description: Gouwestad FD
+url: http://www.gouwestadfd.nl
+author:
+  name: Gouwestad Marketing en Media
+  email: lex@gouwestad.com
+
+include: ['.htaccess']
+version: 3.0.3
+
+
+# Markdown library
+markdown: kramdown
+#   extensions: ['fenced_code_blocks', 'smart']
+
+host:             0.0.0.0
+exclude: [‘css’, ‘_scss’, '_sass','node_modules']
+
+
+## Style Options in posts
+
+
+collections:
+ producten:
+  output: true

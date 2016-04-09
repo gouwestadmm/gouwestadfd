@@ -1,0 +1,23 @@
+flitsverslag:
+ icon: camera
+ name: flitsverslag
+
+nieuws:
+ icon: newspaper-o
+ name: nieuws
+
+column:
+ icon: microphone
+ name: column
+
+publicatie:
+ icon: book
+ name: publicatie
+
+persbericht:
+ icon: file-text-o
+ name: persbericht
+
+event:
+ icon: calendar-check-o
+ name: event

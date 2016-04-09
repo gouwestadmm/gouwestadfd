@@ -1,0 +1,28 @@
+{% include head.html %}
+
+<body class="{{ page.layout }} {{ page.body_class }} {{ page.category }} " data-function="{{ page.body_data_function }}">
+
+	<div class="alert alert-dismissible fade in browsehappy" role="alert">
+		<button type="button" class="close" data-dismiss="alert" aria-label="Close" onclick="IEwarning()">
+			<span aria-hidden="true">&times;</span>
+			<span class="sr-only">Close</span>
+		</button>
+		U gebruikt een <strong>verouderde</strong> browser en/of een browser die niet optimaal werkt op deze website. <a href="https://www.google.nl/chrome/browser/desktop/index.html">Download Google Chrome</a> of <a href="https://www.mozilla.org/nl/firefox/new/">Mozilla Firefox</a> voor een betere, snellere en veiligere internetervaring.
+	</div>
+
+	{% include navbar.html %}
+
+	{% include header.html %}
+
+	<div class="page-holder">
+		{{ content }}
+	</div>
+
+	{% include footer.html %}
+
+	<a class="page-overlay" href="#"></a>
+
+    {% include scripts.html %} {% include googleanalytics.html %}
+</body>
+
+</html>

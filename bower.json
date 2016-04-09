@@ -1,0 +1,36 @@
+{
+  "name": "nvb-bouw",
+  "description": "work for nvb-bouw",
+  "main": "bower",
+  "authors": [
+    "gouwestadmm <lex@gouwestadmm.nl>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/gouwestadmm/nvbb",
+  "moduleType": [
+    "node"
+  ],
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "app/_bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.4",
+    "simple-jekyll-search": "~1.1.4"
+  },
+  "devDependencies": {
+    "smoothstate": "~0.7.2",
+    "Swiper": "swiper#~3.2.7",
+    "skrollr": "~0.6.30",
+    "mixitup2": "latest",
+    "bootstrap": "4.0.0-alpha.2",
+    "scrollreveal": "latest",
+    "fastclick": "latest",
+    "lazysizes": "latest"
+  }
+}

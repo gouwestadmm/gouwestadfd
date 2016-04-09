@@ -1,0 +1,52 @@
+---
+layout: default
+title: Home - laatste nieuws
+image: /img/home-hero-img.jpg
+body_class: home
+event-banner: true
+---
+
+<header class="hero-header homepage-hero hero-bottom-content" style="background-image: url('{{ page.image }}');">
+    <div class="card hero-card">
+        <div class="card-block">
+            <h1>Financien met een glimlach</h1>
+            <a class="btn btn-info-outline btn-lg" href="#">hypotheek berekenen</a>
+        </div>
+    </div>
+</header>
+
+
+<section class="homepage-products" id="">
+	<div class="container-fluid">
+		{% for product in site.producten %}
+			<div class="card">
+				gdhjgds
+			</div>
+		{% endfor %}
+	</div>
+</section>
+
+<section class="homepage-about">
+    <div class="container">
+       	<h3>Over ons</h3>
+       	<p>Wij geloven in het beschermen van onze klanten en het veiligstellen van hun toekomst</p>
+        	<p>Al sinds 1990 verzekeren wij niet alleen omdat het moet, maar omdat je wilt beschermen wat je lief is.</p>
+    </div>
+</section>
+
+<section>
+<div class="to-topics">
+    <div class="footer-next-issue">
+        <div class="footer-next-issue-image"></div>
+        <div class="next-issue-text">lees meer<br></div>
+    </div>
+    <div class="footer-description">
+    	<div class="footer-line-1"><h2>lees meer over deze onderwerpen <br></h2></div>
+        <a class="btn btn-outline btn-primary btn-lg" href="/archief/">
+            ga naar onze topics <span class="fa fa-arrow-right"></span>
+        </a>
+    </div>
+</div>
+</section>
+
+

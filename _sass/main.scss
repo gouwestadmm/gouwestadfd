@@ -1,0 +1,52 @@
+
+
+
+// Import Bootstrap
+@import "utils/_variables";
+@import "../components/bootstrap/scss/bootstrap";
+
+@import "components/navbar";
+
+@import "layout/layout";
+@import "layout/header";
+
+@import "pages/homepage";
+
+
+
+/* ==========================================================================
+   Browse Happy prompt
+   ========================================================================== */
+
+.browsehappy{
+    display: none !important;
+}
+
+.IE .browsehappy {
+    display: block !important;
+    margin: 0.2em 0;
+    background: #eee;
+    color: #000;
+    padding: 5em 3em !important;
+    position: fixed;
+    top: 10%;
+    left: 0;
+    width: 100%;
+    z-index: 2000;
+    font-size: 1.5em;
+    line-height: 1.5;
+    text-align: center;
+    .close{
+        position: absolute ;
+        right: 0.5em;
+        top: 0.5em;
+    }
+}
+
+.IE.11 .browsehappy{
+    display: none;
+}
+
+.IE.warning-dismissed .browsehappy{
+    display: none !important;
+}

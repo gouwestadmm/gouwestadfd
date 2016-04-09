@@ -1,0 +1,20 @@
+{
+  "name": "nvb-bouw",
+  "private": true,
+  "version": "0.0.0",
+  "description": "Workflow for nvb-bouw",
+  "dependencies": {},
+  "devDependencies": {
+    "grunt": "latest",
+    "grunt-contrib-watch": "latest",
+    "grunt-shell": "latest",
+    "load-grunt-tasks": "latest",
+    "time-grunt": "latest",
+    "grunt-concurrent":"latest",
+    "grunt-sass": "latest",
+    "grunt-autoprefixer":  "latest",
+    "grunt-usemin": "latest",
+    "grunt-contrib-concat": "latest",
+     "grunt-contrib-uglify": "latest"
+  }
+}
