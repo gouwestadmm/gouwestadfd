@@ -582,7 +582,7 @@ hr {
   margin-top: 1rem;
   margin-bottom: 1rem;
   border: 0;
-  border-top: 2px solid rgba(0, 0, 0, 0.1);
+  border-top: 2px solid #4cafe1;
 }
 
 small,
@@ -612,7 +612,7 @@ mark,
 }
 
 .list-inline-item:not(:last-child) {
-  margin-right: 5px;
+  margin-right: 1em;
 }
 
 .dl-horizontal {
@@ -634,15 +634,15 @@ mark,
 .blockquote {
   padding: 0.5rem 1rem;
   margin-bottom: 1rem;
-  font-size: 1.25rem;
-  border-left: 0.25rem solid #eceeef;
+  font-size: 1.55rem;
+  border-left: 0.25rem solid #006896;
 }
 
 .blockquote-footer {
   display: block;
   font-size: 80%;
   line-height: 1.5;
-  color: #818a91;
+  color: #006896;
 }
 
 .blockquote-footer::before {
@@ -653,7 +653,7 @@ mark,
   padding-right: 1rem;
   padding-left: 0;
   text-align: right;
-  border-right: 0.25rem solid #eceeef;
+  border-right: 0.25rem solid #006896;
   border-left: 0;
 }
 
