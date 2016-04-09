@@ -18,9 +18,8 @@ $('[data-action=body-action]').click(function(e) {
 //initialize swiper when document ready  
 var homeProductSwiper = new Swiper('.home-product-swiper-container', {
     // Optional parameters
-    pagination: '.upcoming-swiper-pagination',
+    pagination: '.swiper-pagination',
     slidesPerView: 'auto',
-    dots: true,
     paginationClickable: true,
     nextButton: '.swiper-next',
     prevButton: '.swiper-prev'

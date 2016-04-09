@@ -12,4 +12,8 @@
 
 .home-product-swiper-container{
 	padding-top: $element-spacer / 2;
+
+	.swiper-wrapper{
+		display: flex;
+	}
 }

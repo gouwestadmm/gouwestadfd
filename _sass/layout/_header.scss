@@ -5,7 +5,7 @@
 // default styling for the hero header
 
 .hero-header{
-	width: 100vw;
+	width: 100%;
 	min-height: 90vh;
 	display: flex;
 	align-items: center;
@@ -24,12 +24,21 @@
 // card is the default holder for hero content
 .hero-card{
 	margin: $element-spacer;
+	bos-shadow: 0 0.125em 0.5em 0 rgba(4, 49, 64, 0.1);
+	background: rgba(255,255,255,0.94);
 
 	.card-block{
 		display: flex;
 	}
 
 	.btn{
-		margin-left: 1em;
+		margin-left: 2em;
+	}
+
+	h1{
+		color: $brand-primary;
+		text-shadow: 1px 1px 0 rgba(255,255,255,0.9);
+		margin-bottom: 0;
+		margin-top: 0;
 	}
 }

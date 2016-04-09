@@ -10,30 +10,32 @@ event-banner: true
     <div class="card hero-card">
         <div class="card-block">
             <h1>Financien met een glimlach</h1>
-            <a class="btn btn-info-outline btn-lg" href="#">hypotheek berekenen</a>
+            <a class="btn btn-info btn-lg"  href="#">hypotheek berekenen</a>
         </div>
     </div>
 </header>
 
 
 <section class="homepage-products" id="">
-	<div class="container-fluid">
+	<div class="container">
                 <h1>Onze producten</h1>
 		<div class="swiper-container home-product-swiper-container">
 			<div class="swiper-wrapper">
 				{% for product in site.producten %}
-					<div class="card product-card swiper-slide text-xs-center">
+					<div class="card product-card text-xs-center swiper-slide">
                                                                              <div class="card-icon">
-                                                                                <i class="material-icons">face</i>
+                                                                                <i class="material-icons">home</i>
                                                                              </div>
 						<div class="card-block">
 							<h4 class="product-card-title">{{ product.title }}</h4>
-                                                                                            <p> een korte introductie over het product/ het onderdeel</p>
-
+                                                                                            <p class="product-card-text"> een korte introductie over het product/ het onderdeel</p>
+                                                                                            <a href="#" class="btn btn-primary ">lees meer</a>
 						</div>
+
 					</div>
 				{% endfor %}
 			</div>
+                                    <div class="swiper-pagination"></div>
 		</div>
 	</div>
 </section>
@@ -43,22 +45,9 @@ event-banner: true
        	<h3>Over ons</h3>
        	<p>Wij geloven in het beschermen van onze klanten en het veiligstellen van hun toekomst</p>
         	<p>Al sinds 1990 verzekeren wij niet alleen omdat het moet, maar omdat je wilt beschermen wat je lief is.</p>
-    </div>
-</section>
 
-<section>
-<div class="to-topics">
-    <div class="footer-next-issue">
-        <div class="footer-next-issue-image"></div>
-        <div class="next-issue-text">lees meer<br></div>
+            <blockquote><h3>Wij kijken samen met u naar wat u heeft, wilt, en nodig heeft en wat we kunnen doen om dit te realiseren.</h3></blockquote>
     </div>
-    <div class="footer-description">
-    	<div class="footer-line-1"><h2>lees meer over deze onderwerpen <br></h2></div>
-        <a class="btn btn-outline btn-primary btn-lg" href="/archief/">
-            ga naar onze topics <span class="fa fa-arrow-right"></span>
-        </a>
-    </div>
-</div>
 </section>
 
 
