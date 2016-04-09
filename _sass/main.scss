@@ -4,13 +4,20 @@
 // Import Bootstrap
 @import "utils/_variables";
 @import "../components/bootstrap/scss/bootstrap";
+@import "../components/Swiper/dist/css/swiper.css";
+
+@import "base/type";
 
 @import "components/navbar";
+@import "components/card";
 
 @import "layout/layout";
 @import "layout/header";
 
 @import "pages/homepage";
+
+
+
 
 
 

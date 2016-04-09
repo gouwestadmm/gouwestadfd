@@ -18,11 +18,23 @@ event-banner: true
 
 <section class="homepage-products" id="">
 	<div class="container-fluid">
-		{% for product in site.producten %}
-			<div class="card">
-				gdhjgds
+                <h1>Onze producten</h1>
+		<div class="swiper-container home-product-swiper-container">
+			<div class="swiper-wrapper">
+				{% for product in site.producten %}
+					<div class="card product-card swiper-slide text-xs-center">
+                                                                             <div class="card-icon">
+                                                                                <i class="material-icons">face</i>
+                                                                             </div>
+						<div class="card-block">
+							<h4 class="product-card-title">{{ product.title }}</h4>
+                                                                                            <p> een korte introductie over het product/ het onderdeel</p>
+
+						</div>
+					</div>
+				{% endfor %}
 			</div>
-		{% endfor %}
+		</div>
 	</div>
 </section>
 

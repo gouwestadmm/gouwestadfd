@@ -1,0 +1,16 @@
+
+//
+// DEFAULT MARGINS & PADDINGS FOR COMMON PAGE LAYOUT ELEMENTS
+//
+
+.container-fluid{
+	@include media-breakpoint-up(lg){
+		margin-left: 5rem;
+		margin-right: 5rem;
+	}
+}
+
+section{
+	padding-top: 5em;
+	padding-bottom: 5em;
+}

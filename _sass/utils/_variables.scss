@@ -83,7 +83,7 @@ $spacers: (
     y:   ($spacer-y * 3)
   )
 ) !default;
-$border-width:               1px !default;
+$border-width:               2px !default;
 
 
 // Body
@@ -181,7 +181,7 @@ $line-height:                1.5 !default;
 
 $headings-margin-bottom:     ($spacer / 2) !default;
 $headings-font-family:       inherit !default;
-$headings-font-weight:       300 !default;
+$headings-font-weight:       400 !default;
 $headings-line-height:       1.1 !default;
 $headings-color:             inherit !default;
 
@@ -480,9 +480,9 @@ $state-danger-border:            darken($state-danger-bg, 5%) !default;
 
 
 // Cards
-$card-spacer-x:            1.25rem !default;
-$card-spacer-y:            .75rem !default;
-$card-border-width:        1px !default;
+$card-spacer-x:            1.5rem !default;
+$card-spacer-y:            1.5rem !default;
+$card-border-width:        0px !default;
 $card-border-radius:       $border-radius !default;
 $card-border-color:        #e5e5e5 !default;
 $card-border-radius-inner: $card-border-radius !default;
