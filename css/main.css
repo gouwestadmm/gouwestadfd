@@ -6101,6 +6101,9 @@ a.bg-danger:focus, a.bg-danger:hover {
 .sidebar-menu {
   min-width: 250px;
   max-width: 20rem;
+  min-height: 100vh;
+  overflow-y: visible;
+  -webkit-overflow-scrolling: touch;
   background: #fff;
 }
 
