@@ -3,6 +3,11 @@
 // THE NAVBAR BRAND
 // resoltion dependant
 
+.navbar{
+	display: flex;
+	align-items: flex-end;
+}
+
 .navbar-brand{
 	min-width: 180px;
 	max-width: 250px;
@@ -10,4 +15,10 @@
 
 .navbar-nav{
 	padding-right: $navbar-padding-horizontal;
+	margin-right: 0;
+	margin-left: auto;
+}
+
+.nav-toggler{
+	margin-right: 0;
 }

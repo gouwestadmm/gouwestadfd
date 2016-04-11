@@ -1,0 +1,210 @@
+//
+// DEFINE DEFAULTS FOR ELEMENTS
+//
+
+body{
+	-webkit-overflow-scrolling: touch;
+}
+
+section{
+	position: relative;
+	padding: 4em 0;
+	&:nth-child(odd){
+		//background-color: $gray-lighter;
+	}
+}
+
+.container-high{
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+}
+
+//
+// GRID UTILITY CLASSES
+// 
+
+@mixin grid-content{
+  display: block;
+  padding: 0 2rem;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+  flex: 1 1 100%;
+}
+
+@mixin grid-block{
+  display: flex;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  flex: 1 1;
+  flex-flow: row wrap;
+  flex-wrap: nowrap;
+  align-items: flex-start;
+  justify-content: flex-start;
+  order: 0;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+}
+
+.g-c-padding{
+  padding: 1.5rem;
+}
+
+.grid-block{
+  @include grid-block;
+}
+
+.grid-content{
+  @include grid-content;
+}
+
+@mixin shrink{
+  flex: 0 0 100%;
+}
+
+.shrink{
+  @include shrink;
+}
+
+@mixin grow{
+  flex-grow: 1;
+  flex-shrink: 1;
+}
+
+.grow{
+  @include grow;
+}
+
+@mixin vertical{
+  flex-flow: column nowrap;
+  align-items: stretch;
+}
+
+.vertical{
+  @include vertical;
+}
+
+@mixin align-center{
+  align-self: center;
+}
+
+.align-center{
+  @include align-center;
+}
+
+@mixin end{
+  align-self: flex-end;
+}
+
+.end{
+  @include end;
+}
+
+.no-margin-row{
+  margin: 0;
+}
+
+///
+///
+
+.img-center{
+	img{
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+
+
+/* Aspect ratio */
+.ar-1-1{
+  position: relative;
+  width: 100%;   /* desired width */
+  overflow: hidden;
+  &:before{
+    content: "";
+    display: block;
+    padding-top: 100%;  /* initial ratio of 1:1*/
+  }
+  & > div{
+    position:  absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+  }
+}
+
+.ar-2-1{
+  position: relative;
+  width: 100%;   /* desired width */
+  overflow: hidden;
+  &:before{
+    content: "";
+    display: block;
+    padding-top: 45%;  /* initial ratio of 1:1*/
+  }
+  & > div{
+    position:  absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+  }
+}
+
+.ar-1-2{
+  position: relative;
+  width: 100%;   /* desired width */
+  overflow: hidden;
+  &:before{
+    content: "";
+    display: block;
+    padding-top: 150%;  /* initial ratio of 1:1*/
+  }
+  & > div{
+    position:  absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+  }
+}
+
+.ar-3-2{
+  position: relative;
+  width: 100%;   /* desired width */
+  overflow: hidden;
+  &:before{
+    content: "";
+    display: block;
+    padding-top: 55%;  /* initial ratio of 1:1*/
+  }
+  & > div{
+    position:  absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+  }
+}
+
+.ar-2-3{
+  position: relative;
+  overflow: hidden;
+  &:before{
+    content: "";
+    display: block;
+    //padding-top: calc(~'125% '- 1em);  /* initial ratio of 1:1*/
+  }
+  & > div{
+    position:  absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+  }
+}
+

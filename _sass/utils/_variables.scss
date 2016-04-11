@@ -48,7 +48,7 @@ $brand-danger:              #d9534f !default;
 //
 // Quickly modify global styling by enabling or disabling optional features.
 
-$enable-flex:               false !default;
+$enable-flex:               true !default;
 $enable-rounded:            true !default;
 $enable-shadows:            false !default;
 $enable-gradients:          false !default;
@@ -140,7 +140,7 @@ $container-max-widths: (
 // Set the number of columns and specify the width of the gutters.
 
 $grid-columns:               12 !default;
-$grid-gutter-width:          1.875rem !default; // 30px
+$grid-gutter-width:          2rem !default; // 30px
 
 
 // Typography
@@ -181,7 +181,7 @@ $line-height:                1.5 !default;
 
 $headings-margin-bottom:     ($spacer / 2) !default;
 $headings-font-family:       inherit !default;
-$headings-font-weight:       400 !default;
+$headings-font-weight:       300 !default;
 $headings-line-height:       1.1 !default;
 $headings-color:             inherit !default;
 
@@ -386,7 +386,7 @@ $navbar-light-disabled-color:       rgba(0,0,0,.15) !default;
 
 // Navs
 
-$nav-link-padding:                          .5em 1em !default;
+$nav-link-padding:                          .85em 1em !default;
 $nav-link-hover-bg:                         $gray-lighter !default;
 
 $nav-disabled-link-color:                   $gray-light !default;

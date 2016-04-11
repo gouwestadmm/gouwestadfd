@@ -4,11 +4,14 @@
 // Import Bootstrap
 @import "utils/_variables";
 @import "../components/bootstrap/scss/bootstrap";
+
+@import "base/type";
+@import "base/grid";
+
 @import "../components/Swiper/dist/css/swiper.css";
 @import "components/sidebar"; // berekentools overlay
 @import "components/calculator"; // berekentools overlay
 
-@import "base/type";
 
 @import "components/navbar";
 @import "components/card";
