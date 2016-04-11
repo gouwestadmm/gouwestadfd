@@ -35,7 +35,7 @@ Thumbs.db
 # Ignore for Yeoman-Jekyll projects #
 
 _bower_components
-components
+/components
 site
 app/_site
 _site

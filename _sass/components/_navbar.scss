@@ -1,0 +1,13 @@
+
+// 
+// THE NAVBAR BRAND
+// resoltion dependant
+
+.navbar-brand{
+	min-width: 180px;
+	max-width: 250px;
+}
+
+.navbar-nav{
+	padding-right: $navbar-padding-horizontal;
+}
