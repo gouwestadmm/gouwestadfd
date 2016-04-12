@@ -5811,7 +5811,6 @@ a.text-danger:focus, a.text-danger:hover {
 }
 
 .bg-primary {
-  color: #fff !important;
   background-color: #006896 !important;
 }
 
@@ -5820,7 +5819,6 @@ a.bg-primary:focus, a.bg-primary:hover {
 }
 
 .bg-success {
-  color: #fff !important;
   background-color: #5cb85c !important;
 }
 
@@ -5829,7 +5827,6 @@ a.bg-success:focus, a.bg-success:hover {
 }
 
 .bg-info {
-  color: #fff !important;
   background-color: #249ad6 !important;
 }
 
@@ -5838,7 +5835,6 @@ a.bg-info:focus, a.bg-info:hover {
 }
 
 .bg-warning {
-  color: #fff !important;
   background-color: #f0ad4e !important;
 }
 
@@ -5847,7 +5843,6 @@ a.bg-warning:focus, a.bg-warning:hover {
 }
 
 .bg-danger {
-  color: #fff !important;
   background-color: #d9534f !important;
 }
 
@@ -6447,7 +6442,6 @@ section {
 }
 
 .bg-gray-lighter {
-  color: #fff !important;
   background-color: #eceeef !important;
 }
 
@@ -6533,7 +6527,7 @@ a.bg-gray-lighter:focus, a.bg-gray-lighter:hover {
   left: 0;
   display: flex;
   align-items: center;
-  background: rgba(36, 154, 214, 0.65);
+  background: rgba(36, 154, 214, 0.9);
   z-index: -10;
   opacity: 0;
   transform: translate(0, 3vh);
@@ -6550,21 +6544,24 @@ a.bg-gray-lighter:focus, a.bg-gray-lighter:hover {
   right: 0;
   width: 3rem;
   height: 3rem;
+  font-size: 1.25em;
   background: #fff;
   color: #006896;
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 100;
+}
+
+@media (min-width: 992px) {
+  .closer {
+    width: 5rem;
+    height: 5rem;
+  }
 }
 
 .calculator-active {
   overflow: hidden;
-}
-
-.calculator-active .page-holder,
-.calculator-active .navbar {
-  -webkit-filter: blur(5px);
-  filter: blur(5px);
 }
 
 .calculator-active .calculator-holder {
@@ -6686,6 +6683,14 @@ a.bg-gray-lighter:focus, a.bg-gray-lighter:hover {
   top: 0;
   font-size: 35em;
   line-height: 0.5;
+}
+
+.has-icon-left {
+  padding-left: 2em;
+}
+
+.has-icon-left .icon-holder {
+  margin-left: -2em;
 }
 
 .quick-links {
@@ -6860,6 +6865,7 @@ a.bg-gray-lighter:focus, a.bg-gray-lighter:hover {
 }
 
 section {
+  position: relative;
   padding-top: 5em;
   padding-bottom: 5em;
 }
@@ -6871,6 +6877,18 @@ section.center-aligned {
 
 section.center-aligned .row {
   align-items: center;
+}
+
+.background-image {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  background-size: cover;
+}
+
+.background-image.col-sm-4 {
+  width: 33.333333%;
 }
 
 .hero-header {

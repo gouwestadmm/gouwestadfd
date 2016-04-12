@@ -8,3 +8,11 @@
 	font-size: 35em;
 	line-height: 0.5;
 }
+
+.has-icon-left{
+	padding-left: 2em;
+
+	.icon-holder{
+		margin-left: -2em;
+	}
+}

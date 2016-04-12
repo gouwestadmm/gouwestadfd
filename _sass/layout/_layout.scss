@@ -11,6 +11,7 @@
 }
 
 section{
+	position: relative;
 	padding-top: 5em;
 	padding-bottom: 5em;
 
@@ -23,3 +24,15 @@ section{
 		}
 	}
 }
+
+.background-image{
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 100%;
+	background-size: cover;
+	&.col-sm-4{
+		width: 33.333333%;
+	}
+ }
+
