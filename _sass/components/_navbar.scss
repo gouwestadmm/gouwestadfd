@@ -5,7 +5,8 @@
 
 .navbar{
 	display: flex;
-	align-items: flex-end;
+	align-items: center;
+	justify-content: flex-end;
 }
 
 .navbar-brand{
@@ -21,4 +22,53 @@
 
 .nav-toggler{
 	margin-right: 0;
+}
+
+
+//
+// SIDEBAR NAVIGATION
+// The main navigation sidebar
+//
+.sidebar-navigation-holder{
+	width: 30rem;
+	background: #fff;
+	position: fixed;
+	right: 0;
+	top: 0;
+	min-height: 100vh;
+	transform: translate(100%,0);
+	transition: 0.3s ease-out;
+	z-index: 100;
+	padding: 3rem;
+}
+
+.sidebar-nav-active .sidebar-navigation-holder{ 
+	transform: translate(0,0);
+	transition: 0.3s ease-out;
+}
+
+
+//
+// END SIDEBAR NAVIGATION
+//
+
+
+// Page overlay for closing nav
+.page-overlay{
+ 	width: 100%;
+ 	height: 100vh;
+ 	top: 0;
+ 	left: 0;
+	position: fixed;
+	min-height: 110vh;
+	background: fade-out($brand-primary, 0.4);
+	opacity: 0;
+	z-index: -1;
+	transition: 0.3s all 0.3s;
+}
+
+.sidebar-nav-active .page-overlay{
+            opacity: 1;
+            z-index: 50;
+            transition: 0.2s all 0.2s;
 }

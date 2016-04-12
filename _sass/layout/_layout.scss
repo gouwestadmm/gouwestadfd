@@ -13,4 +13,13 @@
 section{
 	padding-top: 5em;
 	padding-bottom: 5em;
+
+	&.center-aligned{
+		display: flex;
+		align-items: center;
+
+		.row{
+			align-items: center;
+		}
+	}
 }

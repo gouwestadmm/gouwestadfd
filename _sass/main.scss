@@ -7,13 +7,18 @@
 
 @import "base/type";
 @import "base/grid";
+@import "base/background-colors";
 
 @import "../components/Swiper/dist/css/swiper.css";
 @import "components/sidebar"; // berekentools overlay
 @import "components/calculator"; // berekentools overlay
 
+@import "components/icons";
 
+@import "components/navs";
 @import "components/navbar";
+@import "components/nav-burger";
+
 @import "components/card";
 
 @import "layout/layout";

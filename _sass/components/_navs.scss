@@ -1,0 +1,21 @@
+
+
+
+.quick-links{
+	padding-top: 2.5rem;
+	padding-bottom: 2.5rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+
+	.nav-item{
+		margin-left: 1.5em;
+		margin-right: 1.5em;
+	}
+}
+
+.fa.quick-link-icon{
+	font-size: 1.67em;
+	display: block;
+}

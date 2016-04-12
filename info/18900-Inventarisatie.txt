@@ -1,0 +1,4 @@
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
+<script type="text/javascript" src="//www.hypotheekbond.nl/javascript/original/f1_external.js"></script>
+<iframe id="f1-frame" frameborder="0" scrolling="no" width="100%" src="//www.hypotheekbond.nl/f1/start/inventarisatie?api_key=350d082dc0cb7531a3d8"></iframe>
+<div style="padding-top: 20px; text-align:center;"><a href="https://www.hypotheekbond.nl" target="_blank"><img border="0" src="//www.hypotheekbond.nl/images/powered.png" alt="hypotheek"/></a></div>
