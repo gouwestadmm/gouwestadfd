@@ -1,0 +1,49 @@
+
+<div class="modal fade afspraak-modal" id="afspraak-modal">
+	<div class="modal-dialog modal-lg" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+			          		<span aria-hidden="true">&times;</span>
+			        	</button>
+				<h5>Een vrijblijvende afspraak aanvragen</h5>
+			</div>
+			<div class="modal-body">
+				<div class="row">
+					<div class="col-sm-6">
+						<p>dajkbdasjkbdsakbdasb dhbas</p>
+					</div>
+					<div class="col-sm-6">
+						<form>
+							<div class="form-group">
+								<input type="text" class="form-control" id="name" placeholder="Enter name" required="required" />
+								<label class="form-label" for="name">Je naam</label>
+							</div>
+
+							<div class="form-group">
+								<input type="email" class="form-control" id="email" placeholder="Enter email" required="required" />
+								<label class="form-label" for="email">email adres</label>
+							</div>
+
+							<div class="form-group">
+								<select id="subject" name="subject" class="form-control c-select" required="required">
+									<option value="na" selected="">Choose One:</option>
+									<option value="service">General Customer Service</option>
+									<option value="suggestions">Suggestions</option>
+									<option value="product">Product Support</option>
+								</select>
+								<label class="form-label" for="subject">Subject</label>
+							</div>
+							
+							<div class="form-group">
+								<label for="name">Message</label>
+								<textarea name="message" id="message" class="form-control" rows="9" cols="25" required="required" placeholder="Message"></textarea>
+							</div>
+							<button type="submit" class="btn btn-primary pull-right" id="btnContactUs">Send Message</button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
