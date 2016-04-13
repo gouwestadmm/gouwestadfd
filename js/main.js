@@ -14,6 +14,17 @@ $('[data-action=body-action]').click(function(e) {
 });
 
 
+$(document).ready(function() {
+    
+    // load image url into parents background
+    $('.data-image').each(function() {
+        var imageUrl = $(this).find('img').attr('src');
+        $(this).css('background-image', 'url(' + imageUrl + ')');
+    });
+
+});
+
+
 
 //initialize swiper when document ready  
 var homeProductSwiper = new Swiper('.home-product-swiper-container', {

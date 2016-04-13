@@ -1,0 +1,80 @@
+/**
+*
+* Highlight
+*
+**/
+
+.highlight-module {
+  overflow: hidden;
+  margin-top: 3em;
+  margin-bottom: 0;
+  position: relative;
+
+  &::after {
+    background: $brand-primary;
+    content: '';
+    height: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    z-index: 0;
+    width: 100%;
+    right: 0;
+    left: 0;
+  }
+
+  ul,
+  ol {
+    padding-left: 0;
+  }
+}
+
+.highlight-module-container {
+  padding-bottom: 1em;
+  z-index: 1;
+}
+
+.highlight-module-content{
+  position: relative;
+  z-index: 2;
+}
+
+.highlight-module-title {
+  font-size: 3em;
+  line-height: 1.2;
+  font-weight: 300;
+  padding-top: 1em;
+  color: #fff;
+}
+
+.highlight-module-text{
+  color: #fff;
+}
+
+.highlight-module-cta {
+  display: block;
+}
+
+
+/*==========  LEFT  ==========*/
+.highlight-module-left {
+  &::after {
+    width: 100%;
+    @include media-breakpoint-up(md) {
+      width: 70%;
+      right: 30%;
+    }
+  }
+}
+
+
+/*==========  RIGHT  ==========*/
+.highlight-module-right {
+  &::after {
+    width: 100%;
+    @include media-breakpoint-up(md) {
+      width: 70%;
+      left: 30%;
+    }
+  }
+}

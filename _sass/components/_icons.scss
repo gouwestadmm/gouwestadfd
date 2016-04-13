@@ -10,9 +10,10 @@
 }
 
 .has-icon-left{
+	position: relative;
 	padding-left: 2em;
-
 	.icon-holder{
+		position: absolute;
 		margin-left: -2em;
 	}
 }

@@ -1,5 +1,22 @@
+// Contextual backgrounds
+
+@mixin bg-variant-light($parent, $color) {
+  #{$parent} {
+    background-color: $color !important;
+  }
+  a#{$parent} {
+    @include hover-focus {
+      background-color: darken($color, 10%);
+    }
+  }
+}
 
 
 // background coloring
 
-@include bg-variant('.bg-gray-lighter', $gray-lighter);
+@include bg-variant-light('.bg-gray-lighter', $gray-lighter);
+
+@include bg-variant-light('.bg-gray-lightest', $gray-lightest);
+
+
+@include bg-variant-light('.bg-info-muted', (fade-out($brand-info, 0.8)));

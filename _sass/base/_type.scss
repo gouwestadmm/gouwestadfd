@@ -71,8 +71,22 @@ body {
 ///
 // FONT STYLING PER ELEMENT
 //
-h1 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
 	letter-spacing: -0.03em;
+}
+
+.uppercase{
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+.text-white{
+    color: #fff;
 }
 
 
