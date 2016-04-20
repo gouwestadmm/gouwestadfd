@@ -6910,6 +6910,16 @@ a.bg-info-muted:focus, a.bg-info-muted:hover {
   }
 }
 
+.image-overlay.light-reversed {
+  background-image: linear-gradient(to top, white, 55%, rgba(255, 255, 255, 0));
+}
+
+@media (min-width: 768px) {
+  .image-overlay.light-reversed {
+    background-image: linear-gradient(215deg, rgba(255, 255, 255, 0.5), 35%, rgba(255, 255, 255, 0));
+  }
+}
+
 .image-overlay.info {
   background-image: linear-gradient(to top, rgba(36, 154, 214, 0.6), 30%, rgba(36, 154, 214, 0));
 }
@@ -7079,6 +7089,10 @@ section.center-aligned .row {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+}
+
+.hero-header .content {
+  position: relative;
 }
 
 .sub-page-hero {
