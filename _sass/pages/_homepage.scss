@@ -3,6 +3,16 @@
 //
 .homepage-hero{
 	background-image: url("/img/home-hero-img");
+	justify-content: flex-end;
+	.content{
+		align-self: flex-start;
+		padding: 5em 3em;
+		font-size: 1.2em;
+		max-width: 35em;
+		h1{
+			color: $brand-info;
+		}
+	}
 }
 
 

@@ -1,0 +1,55 @@
+---
+layout: default
+body_class: post dark-header
+
+---
+
+<article class="post cd-articles">
+
+	  {% assign rubriek = site.data.rubriek[page.rubriek-title] %}
+
+	<figure class="hero-header sub-page-hero post-header data-image {{ page.header.colors }} {% if page.header.gradient == true %} with-gradient {% endif %}" style="background-position: {{ page.header.afbeeldinsgpositie }};">
+	  	<img class="" src="{{ page.image }}">
+	  	<div class="overlay post-header-overlay"></div>
+	  	<figcaption class="post-header-caption heading-bordered {{ page.header.caption-position }} ">
+
+	 	 </figcaption>
+	 	<div class="mouse"></div>
+	</figure>
+
+	<section class="post-content container-fluid">
+			<div class="post-content-interior">
+				<div class="the-content" id="the-content">
+					<div class="post-titles">
+						<h3 class="post-category label label-info">{{ page.category }}</h3>
+						<h1 class="post-title heading-bordered bordered-above">{{ page.title }}</h1>
+						{% if page.subtitle %}
+						<h6 class="post-subtitle">{{ page.subtitle }}</h6>
+						{% endif %}
+					</div>
+
+					<main class="editor-content"id="post-content">
+						{{ content }}
+					</main>
+
+				</div>
+				<hr>
+				<!--<section class="post-footer">
+					<div class="container-fluid">
+						<div class="row">
+							<div class="col-xs-12">
+								<h3 class="text-center">Meer artikelen lezen</h3>
+							</div>
+						
+							{% include related-posts.html %}
+						</div>
+						<br>
+						<div class="text-center">
+							<a class="btn btn-primary btn-outline" href="/archief">naar nieuws overzicht <span class="fa fa-arrow-circle-o-right"></span> </a>
+						</div>
+					</div>
+				</section>-->
+			</div>
+	</section>
+	
+</article>

@@ -22,6 +22,8 @@ host:             0.0.0.0
 exclude: [‘css’, ‘_scss’, '_sass','node_modules']
 
 
+permalink: /:categories/:title
+
 ## Style Options in posts
 
 

@@ -7,13 +7,34 @@ event-banner: true
 ---
 
 <header class="hero-header homepage-hero hero-bottom-content" style="background-image: url('{{ page.image }}');">
-    <div class="card hero-card">
-        <div class="card-block">
-            <h1>Financien met een glimlach</h1>
-            <a class="btn btn-info btn-lg"  href="#" data-action="body-action" data-action-target="calculator-active">hypotheek berekenen</a>
+    <div class="content">
+            <h1>Jouw financien, zorgeloos en leuk</h1>
+            <h3>Financiele dienstverlening met aandacht</h3>
         </div>
-    </div>
 </header>
+
+<div class="quick-links">
+    <ul class="nav nav-inline">
+        <li class="nav-item" >
+            <a class="nav-link" href="#" data-action="body-action" data-action-target="calculator-active">
+                <span class="quick-link-icon fa fa-line-chart"></span>
+                <span class="tab-selector-text">zelf berekenen</span>
+            </a>
+        </li>
+        <li  class="nav-item">
+            <a class="nav-link" href="#afspraak-modal" data-toggle="modal" data-target="#afspraak-modal">
+                <span class="quick-link-icon fa fa-calendar"></span>
+                <span class="tab-selector-text">een afspraak aanvragen</span>
+            </a>
+        </li>
+        <li  class="nav-item">
+            <a class="nav-link">
+                <span class="quick-link-icon fa fa-globe"></span>
+                <span class="tab-selector-text">actuele hypotheekrentes</span>
+            </a>
+        </li>
+    </ul>
+</div>
 
 
 <section class="homepage-products" id="">
@@ -53,6 +74,15 @@ event-banner: true
 <section class="cta-banner">
 </section>
 
+<section>
+    <div class="container">
+        <div class="row">
+            {% for post in site.posts  | limit:3%}
+                <a href="{{ post.url }}">{{ post.title }}</a>
+            {% endfor %}
+        </div>
+    </div>
+</section>
 
 {% include bereken-hypotheek.html %}
 

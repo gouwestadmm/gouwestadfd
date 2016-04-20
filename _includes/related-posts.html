@@ -1,0 +1,25 @@
+<div class="related-posts">
+	<div class="row">
+	 	{% for post in site.related_posts limit:3 %}
+	   		<article class="article-link {{ post.category }} {{ post.article_class }} {{ post.tags}}">
+				<div class="card">
+					<div class="article-image-holder ar-2-1" href="{{ post.url }}">
+						<div class="article-image data-image">
+							<img class="img-responsive" src="{{ post.image }}">
+						</div>
+						<a href="{{ post.url }}" class="article-overlay"></a>
+						<a class="article-cat-link" href="/archief/{{ post.category }}/index.html">
+							{% assign cat = site.data.cat[post.category] %}
+							<i class="fa fa-{{ cat.icon }}"></i>
+						</a>
+					</div>
+					<div class="article-content">
+						<div class="article-data">
+							<h3 class="article-title">{{ post.title }}</h3>		
+						</div>
+					</div>
+				</div>
+			</article>
+		{% endfor %}
+	</div>
+</div>

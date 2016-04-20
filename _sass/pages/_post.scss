@@ -1,0 +1,687 @@
+
+// move this to global styles
+body{
+	//padding-top: $navbar-height;
+}
+
+// default post container styles
+.post{
+	background: $gray-lighter;
+	@include media-breakpoint-up(md) {
+		font-size: 1.1em;
+	}
+}
+
+
+// The post contents width definition 
+// has to be rem for constant width
+$max-post-width: 48rem;
+$max-element-width: $max-post-width + 15rem;
+
+// info bar on top of post
+$info-bar-height: 60px;
+
+@mixin max-post-width{
+	max-width: $max-post-width;
+}
+
+//
+// POST HEADER STYLES
+// start
+
+.post-header{
+	background-position: center;
+	background-size: cover;
+	position: relative;
+	display: flex;
+	margin-bottom: 0;
+	z-index: 2;
+	align-items: flex-end;
+	top: -5rem;
+	left: 0;
+	width: 100vw;
+
+	@include media-breakpoint-up(md) {
+		position: fixed;
+		top: 0;
+		left: 0;
+		background-attachment: fixed;
+		// 100vh - navbar -bottommargin
+		height: 65vh;
+		transform: translate(0,0);
+	}
+
+
+	.post-header-overlay{
+		background-color: fade-out($brand-info,0.9);
+		background-image: linear-gradient(to top , fade-out($brand-info, 0.4), 30%, fade-out($brand-info, 0.8));
+		@include media-breakpoint-up(md) {
+      			background-image: linear-gradient(to right , fade-out($brand-info,0.35), fade-out($brand-info, 0.7));
+      		}
+	}
+
+}
+
+// Post Header figcaption defaults
+.post-header-caption{
+	align-self: flex-end;
+	display: flex;
+	flex-flow: column;
+	position: relative;
+
+	margin: 1rem;
+	@include media-breakpoint-up(lg) {
+			margin: 8rem; 
+	}
+
+	&.top{
+		align-self: flex-start;
+	}
+	&.center{
+		align-self: center;
+	}
+	&.end{
+		align-self: flex-end;
+	}
+	&.alternate{
+		align-self: flex-start;
+	}
+	&.center{
+		align-self: center;
+	}
+
+	// Default styles
+	.post-header-title{
+		font-weight: 400;
+		font-size: 2.8em;
+		color: #fff ;
+		max-width: 12em;
+		margin: 0;
+		letter-spacing: -0.065em;
+	}
+
+}
+
+//
+// POST header rubriek title
+
+.post-header-rubriek-title{
+	color: #fff;
+	font-size: 0.75em;
+	text-transform: uppercase;
+	font-weight: 400;
+	letter-spacing: 0.2em;
+	margin-bottom: 0.5em;
+}
+
+.post-content{
+	@include media-breakpoint-up(md) {
+		margin-top: 60vh;
+		padding-top: 0;
+		margin-left: 6rem;
+	}
+}
+
+.post-content-interior{
+	z-index: 3;
+	margin-bottom: -8.5rem;////?????????
+}
+
+//
+// SIDEBAR CLOSED
+//
+
+.sidebar-closed{
+
+	// full-width post-content
+	.post-content-interior{
+		max-width: 100% !important;
+		transition: 0.3s all;
+	}
+	.sidebar{
+		transform: translate(-100%, 0)!important;
+		transition: 0.3s all;
+	}
+}
+
+// close btn
+.sidebar .close{
+	position: absolute;
+	left: 0;
+	top: 0;
+	background: #fff;
+	color: $brand-primary;
+	opacity: 1;
+	padding: 0 0.5em;
+}
+
+.sidebar-closed{
+	.sidebar .close{
+		transform: translate(330px, 0);
+	}
+}
+
+
+//
+// CAT TAGS POST
+// The Category and tags info at the top of the post
+
+.post-cat-tags{
+	background: $gray-lighter;
+	display: flex; 
+	align-items: center;
+	z-index: 10; // stays on top
+	@include media-breakpoint-up(lg) {
+		height: $info-bar-height;
+	}
+}
+
+.post-tags{
+	flex: 0 0 auto;
+	margin-left: 0;
+	display: flex;
+	margin-bottom: 0;
+	.post-tag{
+		font-size: 0.85em;
+		color: $gray;
+		margin-right: 2em;
+		flex: 0 0 auto;
+		list-style: square;
+	}
+	@include media-breakpoint-down(sm) {
+		display: none;
+	}
+}
+
+.post-category{
+	position: absolute;
+	top: 0;
+	margin-top: -0.5em; // need to calc padding & stuff
+	font-size: 1em;
+	font-weight: 500;
+	padding: .5em .8em
+}
+
+
+.post-cat-link{
+	width: $info-bar-height;
+	height: $info-bar-height;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 0.5em 1em;
+	color: #fff;
+	background: $brand-primary;
+	z-index: 5;
+	&:hover,
+	&:focus{
+		color: #f5f5f5;
+	}
+}
+
+
+//
+// END CAT TAGS POST SECTION
+//
+
+//
+// POST TITLES SECTION
+//
+.post-titles{
+	max-width: $max-post-width;
+	margin-left: auto;
+	margin-right: auto;
+	position: relative;
+	z-index: 10;
+	padding: 1rem;
+	@include media-breakpoint-up(lg){
+		padding: 8rem 0 2em;
+	}
+		// on smaller devices this title is always hidden
+	@include media-breakpoint-down(sm) {
+		display: none;
+	}
+}
+
+.post-rubriek-title{
+	color: $brand-primary;
+	font-weight: 400;
+}
+
+.post-title{
+	color: $headings-color;
+	font-size: 4em;
+	letter-spacing: -0.05em;
+	margin-bottom: 0.3em;
+	strong{
+		font-size: 0.5em;
+		font-weight: 400;
+		letter-spacing: -0.045em;
+		color: $brand-info;
+	}
+}
+
+.post-subtitle{
+	text-align: center;
+	//color: $light-blue;
+	font-weight: 400;
+	letter-spacing: -0.01em;
+}
+
+//
+// END POST TITLES SECTION ****
+//
+
+.read-time{
+	//position: absolute;
+	//right: 1em;
+	//top: 1em;
+	font-size: 0.9em;
+	color: $gray-light;
+}
+
+
+//
+// MAIN EDITOR FILLED CONTENT STYLING
+// Some styling for common elements inside the editor filled content
+
+.the-content{
+	main{
+		.btn{
+			// on phones the buttons are always block
+			@include media-breakpoint-down(sm) {
+				display: block;
+			}
+		}
+	}
+	// first paragraph is lead
+	main > p:nth-of-type(1){
+		font-size: 1.3em;
+		&::first-letter {
+			float: left;
+			color: $brand-primary; 
+			font-size: 5.5em; 
+			line-height: 1em; 
+			margin-top: -0.05em; 
+			margin-bottom: -0.15em;
+			padding-right: 0.05em; 
+			padding-left: 0; 
+			font-weight: 300;
+			text-transform: uppercase;
+		}
+	}
+}
+
+.intro-section{
+	background: $gray-lighter;
+	padding-top: 4em;
+	padding-bottom: 4em;
+}
+
+
+.the-content main{
+	h1,h2,h3,h4,h5,h6,p,
+	ul,dl,ol,span, .zero-clipboard,
+	.card{
+		@include media-breakpoint-up(sm) {
+			max-width: $max-post-width; 
+			margin-left: auto;
+			margin-right: auto;
+		}
+	}
+	blockquote{
+		max-width: $max-element-width;
+		text-align: center;
+		margin-left: auto;
+		margin-right: auto;
+		h1,h2,h3,h4,h5,h6
+		ul, dl, ol{
+			max-width: $max-element-width; //avoid these overrides
+		}
+	}
+
+	.breadcrumb{
+		max-width: none;
+	}
+
+
+	h1{
+		@include media-breakpoint-up(md) {
+			font-size: 3.5em;
+		}
+		letter-spacing: -0.05em;
+	}
+	h2{
+		font-size: 2.8em;
+	}
+	h3{
+		font-size: 2em;
+		color: $brand-primary;
+	}
+
+	.the-content{
+		position: relative;
+		@include media-breakpoint-up(sm) {
+			margin-left: auto;
+			margin-right: 0;
+		}
+		@include media-breakpoint-up(xl) {
+			padding-left: 0;
+			padding-right: 0;
+			background: #fff;
+			border-radius: 3px;
+		}
+	}
+
+	.post-image-container,
+	iframe{
+		max-width: $max-element-width !important;
+		margin: 3em auto !important;
+		img{
+			@include img-fluid;
+		}
+	}
+}
+
+.full-width{
+	h1,h2,h3,h4,h5,h6,p,
+	ul,dl,ol,span, .zero-clipboard,
+	.card{
+		@include media-breakpoint-up(sm) {
+			max-width: none; 
+			margin-left: 0;
+			margin-right: 0;
+		}
+	}
+}
+
+.post-content{
+	background: transparent;
+}
+
+
+
+//
+// DEFAULT STYLING FOR ELEMENTS
+//
+
+//titles & stuff
+
+.editor-content{
+
+	p + h3{
+		margin-top: 1.35em;
+	}
+
+	p + h5{
+		margin-top: 2em;
+	}
+
+	hr + h3{
+		margin-top: 1.5em;
+	}
+
+	p + h4{
+		margin-top: 1.5em;
+	}
+
+	h4 + p{
+		margin-top: 0;
+	}
+
+	h4{
+		font-weight: 400;
+	}
+
+	h3 + h5{
+		margin-top: -0.5em;
+	}
+
+	h5 + h4{
+		margin-top: -0.3em;
+	}
+	h5 + h6{
+		margin-top: -0.5em;
+		font-size: 0.8em;
+	}
+
+	blockquote{
+		margin-top: 3em;
+		margin-bottom: 3em;
+		p{
+			color: $gray;
+		}
+	}
+}
+
+
+// IMAGES
+// dealing with images
+//
+
+.post-image-container{
+	max-width: $max-element-width;
+	margin-left: auto;
+	margin-right: auto;
+	img{
+		margin: auto;
+	}
+	figcaption{
+		font-size: 0.7em;
+		text-align: right;
+		color: $gray;
+		font-style: italic;
+		padding: 0.25em;
+	}
+}
+
+
+//
+// STYLING FOR THE SLIDING POST LAYOUT
+//
+
+.article-swiper-container{
+	.swiper-wrapper{
+		height: calc(100vh - 80px); // minus navbar height
+	}
+	.swiper-slide{
+		width: 95%;
+	}
+}
+
+.article-slide-header{
+	display: flex;
+	height: calc(100vh - 80px); // minus navbar height
+	width: 100vw;
+	background-size: cover;
+	background-porsition: center;
+	align-items: flex-end;
+}
+
+.article-swiper-next{
+	position: fixed;
+	right: 0;
+	bottom: 0;
+	font-size: 2em;
+	z-index: 50;
+	background: #fff;
+	border-radius: 4em;
+	padding: 0.5em 0.6em;
+	margin: 1em;
+	box-shadow: 1px 2px 5px rgba(0,0,0,0.1);
+}
+
+.article-slide-intro{
+	width: 100vw;
+	height: calc(100vh - 80px); // minus navbar height
+
+}
+
+.article-slide-intro-content{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	max-width: 50rem;
+	margin: auto;
+	align-self: center;
+	flex: 1;
+}
+
+.article-swiper-slide-content{
+	overflow-y: auto;
+}
+
+//
+// POST HAS SIDEBAR STYLES
+//
+
+
+.post-content{
+	background: transparent !important;
+	padding-top: 0;
+	padding-left: 0;
+	padding-right: 0;
+	display: flex;
+	height: auto;
+}
+
+.share-btns{
+	display:  flex;
+	flex: 1;
+	align-self: flex-end;
+	align-items: flex-end;
+	width: 100%;
+}
+
+.post-content-interior{
+	@include make-col();
+	@include make-col-span(12);
+	background: #fff;
+}
+
+
+
+//
+// Related posts styling
+//
+.related-posts{
+	width: 100%;
+	max-width: calc(#{$max-element-width} + 10rem;
+	margin-left: auto;
+	margin-right: auto;
+	.card{
+		margin: 0;
+	}
+	.article-link{
+		flex-shrink: 1;
+
+		// on small screens
+		@include media-breakpoint-down(lg) {
+			@include make-col-span(12);
+			padding: 0;
+			border-bottom: 1px solid $gray-lighter;
+			.article-image-holder{
+				@include make-col-span(3);
+			}
+			.article-content{
+				@include make-col-span(9);
+			}
+			.article-footer,
+			.article-date,
+			.article-tags,
+			.article-cat-link{
+				display: none;
+			}
+
+			&:first-child{
+				border-top: 1px solid $gray-lighter;
+			}
+		}
+	}
+
+	.article-cat-link{
+		font-size: 0.8em;
+		right: 1em;
+		padding: 0.25em 1em;
+		box-shadow: 0 5px 3px -3px rgba(0, 0, 0, 0.15);
+	}
+	.article-title{
+		font-size: 1em;
+		strong{
+			display: none;
+		}
+	}
+
+	@include media-breakpoint-up(lg) {
+		
+		.article-data{
+			padding-left: 0;
+			padding-right: 0;
+		}
+		.article-date{
+			display: none;
+		}
+		.article-intro,
+		.lead{
+			display: none;
+		}
+
+		.article-footer{
+			display: none;
+		}
+
+	}
+
+
+
+}
+
+.post-footer{
+	h3{
+		max-width: none !important;
+	}
+}
+
+//
+//
+//
+
+.highlight,
+.bs-example{
+	max-width: 50rem;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.footer-article {
+   	 @include make-col;
+	@include make-col-span(9);
+	@include make-col-offset(3);
+}
+
+.article-footer-container {
+    padding: 50px;
+}
+
+.article-footer-figure {
+    height: 480px;
+    position: relative;
+}
+
+.article-footer-figure-image {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    left: 0;
+    background-size: cover;
+    background-position: center;
+
+}
+
+.text-center{
+	text-align: center;
+}
