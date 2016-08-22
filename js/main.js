@@ -25,7 +25,6 @@ $(document).ready(function() {
 });
 
 
-
 //initialize swiper when document ready  
 var homeProductSwiper = new Swiper('.home-product-swiper-container', {
     // Optional parameters

@@ -1,46 +1,51 @@
 
-<div class="modal fade afspraak-modal" id="afspraak-modal">
-	<div class="modal-dialog modal-lg" role="document">
-		<div class="modal-content">
-			<div class="modal-header">
-				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-			          		<span aria-hidden="true">&times;</span>
-			        	</button>
-				<h5>Een vrijblijvende afspraak aanvragen</h5>
+<div class="afspraak-modal" id="afspraak-modal">
+
+	<a class="navigation-menu-closer" data-action="body-action" data-action-target="afspraak-modal-active" href="#">
+		<span class="navigation-menu-closer-text m-r-1">afspraak formulier sluiten</span>
+		<span class="fa fa-close"></span>
+	</a>
+
+	<div class="content">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-xs-12">
+					<h1 class="text-info"><span class="fa fa-calendar-o"></span> Een afspraak maken</h1>
+				</div>
 			</div>
-			<div class="modal-body">
-				<div class="row">
-					<div class="col-sm-6">
-						<p>dajkbdasjkbdsakbdasb dhbas</p>
-					</div>
-					<div class="col-sm-6">
-						<form>
-							<div class="form-group">
-								<input type="text" class="form-control" id="name" placeholder="Enter name" required="required" />
-								<label class="form-label" for="name">Je naam</label>
-							</div>
+			<div class="row">
+				<div class="col-sm-6 p-r-2">
+					<p class="lead">Wil je meer weten over je je financieringsmogelijkheden voor de aankoop van je droomwoning, of wil je je verzekeringspakket door laten lichten? <b>Het eerste gesprek bij Gouwestad is altijd volledig vrijblijvend.</b></p>
+					<br><br>
+					<p>
+					Vul hiernaast je gegevens en geef in het bericht aan waarover je een afspraak wilt maken. Wij nemen dan zo snel mogelijk contact met je op.</p>
+				</div>
+				<div class="col-sm-6">
+					<div class="card">
+						<div class="card-block">
+							<form>
+								<div class="form-group">
+									<input type="text" class="form-control" id="naam" placeholder="je naam" required="required" />
+									<label class="form-label" for="name">Je naam</label>
+								</div>
 
-							<div class="form-group">
-								<input type="email" class="form-control" id="email" placeholder="Enter email" required="required" />
-								<label class="form-label" for="email">email adres</label>
-							</div>
+								<div class="form-group">
+									<input type="email" class="form-control" id="email" placeholder="Je email adres" required="required" />
+									<label class="form-label" for="email">email adres</label>
+								</div>
 
-							<div class="form-group">
-								<select id="subject" name="subject" class="form-control c-select" required="required">
-									<option value="na" selected="">Choose One:</option>
-									<option value="service">General Customer Service</option>
-									<option value="suggestions">Suggestions</option>
-									<option value="product">Product Support</option>
-								</select>
-								<label class="form-label" for="subject">Subject</label>
-							</div>
-							
-							<div class="form-group">
-								<label for="name">Message</label>
-								<textarea name="message" id="message" class="form-control" rows="9" cols="25" required="required" placeholder="Message"></textarea>
-							</div>
-							<button type="submit" class="btn btn-primary pull-right" id="btnContactUs">Send Message</button>
-						</form>
+								<div class="form-group">
+									<input type="text" class="form-control" id="telefoonnummer" placeholder="Je telefoonnummer" required="required" />
+									<label class="form-label" for="telefoonnummer">je telefoonnummer</label>
+								</div>
+								
+								<div class="form-group">
+									<label for="name">Je bericht</label>
+									<textarea name="message" id="message" class="form-control" rows="9" cols="25" required="required" placeholder="bericht"></textarea>
+								</div>
+								<button type="submit" class="btn btn-primary pull-right" id="btnContactUs">Verstuur je bericht</button>
+							</form>
+						</div>
 					</div>
 				</div>
 			</div>

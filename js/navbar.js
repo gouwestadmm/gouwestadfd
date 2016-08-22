@@ -1,22 +1,23 @@
 
 //Function for toggling the main menu 
 function menuToggle() {
-    if ($('body').hasClass('sidebar-nav-active')) {
-        $('body').removeClass('sidebar-nav-active'),
+    if ($('body').hasClass('navigation-menu-active')) {
+            $('body').removeClass('navigation-menu-active'),
             $('.m-bar').removeClass('animate');
     } else if ($('body').hasClass('sidebar-active')) {
-        $('body').removeClass('sidebar-active'),
-            $('body').addClass('sidebar-nav-active'),
+            $('body').removeClass('sidebar-active'),
+            $('body').addClass('navigation-menu-active'),
             $('.m-bar').addClass('animate');
     } else {
-        $('.m-bar').addClass('animate'),
-            $('body').addClass('sidebar-nav-active');
+            $('.m-bar').addClass('animate'),
+            $('body').addClass('navigation-menu-active');
     }
 }
 
 
 $(".side-nav-toggle").click(function(e) {
     e.preventDefault();
+    console.log("menu-clicked");
     menuToggle();
 });
 
