@@ -8227,6 +8227,10 @@ ul, .the-content main blockquote dl, .the-content main blockquote ol {
   padding-right: 5rem;
 }
 
+.large-address {
+  line-height: 1.5;
+}
+
 .sidebar-contact {
   border-right: 1px solid #f7f7f9;
   margin-right: 2rem;
