@@ -1,0 +1,100 @@
+
+.page-holder-contact{
+	display: flex;
+}
+
+.has-bg{
+	margin-left: -5rem;
+	margin-right: -5rem;
+	padding-left: 5rem;
+	padding-right: 5rem;
+}
+//
+// SIDEBAR STYLES CONTACT PAGE
+//
+
+.sidebar-contact{
+	// large desktop screens
+	background: #fff !important;
+	border-right: 1px solid $gray-lightest;
+	margin-right: $grid-gutter-width;
+	height: calc(100vh - 5rem);
+	@include media-breakpoint-up(lg){
+		flex: 0 0 20%;
+	}
+}
+
+.main-contact{
+	flex: 1 1 100%;
+	order: 1;
+	@include media-breakpoint-up(lg){
+		flex: 1 0 80%;
+		padding: 2.5rem;
+	}
+	@include media-breakpoint-up(xl){
+		padding: 0 5rem;
+	}
+
+	.bg-primary{
+		h2{
+			color: #fff;
+		}
+	}
+}
+
+
+//
+//
+//
+
+.helpdesk-image{
+    position: absolute;
+    right: -15vw;
+    bottom: -10vh;
+    width: 35vw;
+    z-index: -1;
+}
+
+
+//
+// FAQ SECTION
+//
+
+.faq-title{
+	max-width: 50rem;
+	margin-left: 2em;
+	a{
+		color: $body-color;
+		font-style: italic;
+		font-size: 1em;
+
+		@include hover-focus{
+			text-decoration: none;
+		}
+	}
+
+}
+
+.faq-title a:before{
+	display: inline-block;
+	position: relative;
+    	left: -2em;
+	font-family: FontAwesome;
+	font-style: normal;
+    	content: "\f139";   
+    	color: $brand-primary;
+    	transform: rotate(0deg);
+	transition: 0.2s all;
+}
+
+.faq-title a.collapsed:before {
+    	content: "\f139";   
+    	transform: rotate(180deg);
+    	transition: 0.2s all;
+}
+
+.faq-answer{
+	max-width: 50rem;
+	margin-bottom: 2.5rem;
+}
+

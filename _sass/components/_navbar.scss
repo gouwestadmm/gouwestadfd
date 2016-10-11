@@ -14,12 +14,27 @@
 .navbar{
 	display: flex;
 	align-items: center;
-	justify-content: flex-end;
+	justify-content: space-between;
+	height: 3.5rem;
+	background: #fff;
+
+	@include media-breakpoint-up(lg){
+		height: 5rem;
+	}
+
+	@include media-breakpoint-up(xl){
+		padding-left: 5rem;
+		padding-right: 5rem;
+	}
+
+	&:after{
+		content: none;
+	}
 }
 
 .navbar-brand{
-	min-width: 180px;
-	max-width: 250px;
+	min-width: 200px;
+	max-width: 280px;
 }
 
 .navbar-nav{
@@ -30,6 +45,8 @@
 
 .nav-toggler{
 	margin-right: 0;
+	margin-top: 0;
+	display: block;
 }
 
 
