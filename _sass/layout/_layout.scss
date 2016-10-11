@@ -4,10 +4,7 @@
 //
 
 .container-fluid{
-	@include media-breakpoint-up(lg){
-		margin-left: 5rem;
-		margin-right: 5rem;
-	}
+
 }
 
 section{
@@ -25,8 +22,40 @@ section{
 	}
 }
 
+
+
+.page-holder{
+	margin-top: 5rem; // make room for navbar 
+}
+
+
+
+
+//
+// Define different width defaults within the grid
+//
+
+
 .story-width{
 	max-width: 40rem;
 	margin-left: auto;
 	margin-right: auto;
+}
+
+
+// max width no centering
+.max-width{
+	max-width: 45rem;
+}
+
+
+
+//
+// MAKE STICKY
+// postition: sticky with js polyfill
+
+.makesticky{
+	position: -webkit-sticky;
+	position: sticky;
+	top: 0;
 }
