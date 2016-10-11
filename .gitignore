@@ -43,3 +43,5 @@ _gh-pages
 dist
 node_modules
 .tmp
+
+GEMFILE
