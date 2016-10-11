@@ -554,8 +554,8 @@ $info-bar-height: 60px;
 }
 
 .post-content-interior{
-	@include make-col-ready();
-	@include make-col(12);
+	@include make-col();
+	@include make-col-span(12);
 	background: #fff;
 }
 
@@ -577,14 +577,14 @@ $info-bar-height: 60px;
 
 		// on small screens
 		@include media-breakpoint-down(lg) {
-			@include make-col(12);
+			@include make-col-span(12);
 			padding: 0;
 			border-bottom: 1px solid $gray-lighter;
 			.article-image-holder{
-				@include make-col(3);
+				@include make-col-span(3);
 			}
 			.article-content{
-				@include make-col(9);
+				@include make-col-span(9);
 			}
 			.article-footer,
 			.article-date,
@@ -654,8 +654,9 @@ $info-bar-height: 60px;
 }
 
 .footer-article {
-   	 @include make-col-ready;
-	@include make-col(9);
+   	 @include make-col;
+	@include make-col-span(9);
+	@include make-col-offset(3);
 }
 
 .article-footer-container {

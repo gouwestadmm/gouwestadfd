@@ -20,7 +20,7 @@
     "tests"
   ],
   "dependencies": {
-    "jquery": "~3.0.0",
+    "jquery": "~2.1.4",
     "simple-jekyll-search": "~1.1.4"
   },
   "devDependencies": {
@@ -28,12 +28,9 @@
     "Swiper": "swiper#~3.2.7",
     "skrollr": "~0.6.30",
     "mixitup2": "latest",
-    "bootstrap": "4.0.0-alpha.4",
+    "bootstrap": "4.0.0-alpha.2",
     "scrollreveal": "latest",
     "fastclick": "latest",
     "lazysizes": "latest"
-  },
-  "resolutions": {
-    "jquery": ">=1.7"
   }
 }

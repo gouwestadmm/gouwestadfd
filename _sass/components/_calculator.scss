@@ -1,18 +1,57 @@
 
 .calculator-holder{
+	@icnlude make-row(0);
+	position: fixed;
+	width: 100%;
 	min-height: 100vh;
+	top: 0;
+	left: 0;
+	display: flex;
 	align-items: center;
+	background: fade-out($brand-info, 0.1);
+	z-index: -10;
+	opacity: 0;
+	transform: translate(0,3vh);
+	transition: 0.3s opacity, 0.4s transform;
 
 	iframe{
 		min-height: 600px; // temp style
 	}
 }
 
+.closer {
+    	position: absolute;
+    	top: 0;
+    	right: 0;
+    	width: 3rem;
+    	height: 3rem;
+    	font-size: 1.25em;
+    	@include media-breakpoint-up(lg){
+    		width: 5rem;
+    		height: 5rem;
+    	}
+    	background: #fff;
+    	color: $brand-primary;
+    	display: flex;
+    	align-items: center;
+    	justify-content: center;
+    	z-index: 100;
+}
+
+.calculator-active{
+	overflow: hidden; //disable scroll;
+}
+
+.calculator-active .calculator-holder{
+	z-index: 100;
+	opacity: 1;
+	transform: translate(0,0);
+	transition: 0.3s opacity, 0.4s transform;
+}
 
 .calculator-sidebar-menu{
-	height: calc(100vh - 5rem);
-	padding-right: $spacer;
-	border-right: 1px solid $gray-lighter;
+	flex: 1 1 auto;
+	min-height: 100vh;
 }
 
 .calculator-menu{
@@ -25,22 +64,23 @@
 
 
 .calculator-content{
-	@include make-col-ready;
-	@include make-col(9);
+	@include make-col;
+	@include make-col-span(9);
+	min-width: 600px;
+	max-width: 70rem;
 	min-height: 100vh;
 	margin-left: auto;
 	margin-right: auto;
 	flex: 1 1 auto;
 	position: relative;
 	display: block;
+	color: #fff;
+	padding-top: 5rem;
+	padding-bottom: 5rem;
 	.card{
 		display: block;
 		width: 100%;
 		height: auto;
-	}
-
-	@include media-breakpoint-up(lg){
-		padding: $spacer * 4;
 	}
 }
 
