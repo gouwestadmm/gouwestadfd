@@ -6643,7 +6643,7 @@ a.bg-info-muted:focus, a.bg-info-muted:hover {
 }
 
 .sidebar-content {
-  padding: 1.25rem 0.625rem;
+  padding: 1.25rem 1.25rem;
 }
 
 .sidebar-nav {
@@ -8224,7 +8224,6 @@ ul, .the-content main blockquote dl, .the-content main blockquote ol {
 }
 
 .sidebar-contact {
-  background: #fff !important;
   border-right: 1px solid #f7f7f9;
   margin-right: 2rem;
   height: calc(100vh - 5rem);
@@ -8243,7 +8242,6 @@ ul, .the-content main blockquote dl, .the-content main blockquote ol {
 
 @media (min-width: 992px) {
   .main-contact {
-    flex: 1 0 80%;
     padding: 2.5rem;
   }
 }

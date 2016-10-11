@@ -15,7 +15,6 @@
 
 .sidebar-contact{
 	// large desktop screens
-	background: #fff !important;
 	border-right: 1px solid $gray-lightest;
 	margin-right: $grid-gutter-width;
 	height: calc(100vh - 5rem);
@@ -28,7 +27,6 @@
 	flex: 1 1 100%;
 	order: 1;
 	@include media-breakpoint-up(lg){
-		flex: 1 0 80%;
 		padding: 2.5rem;
 	}
 	@include media-breakpoint-up(xl){
