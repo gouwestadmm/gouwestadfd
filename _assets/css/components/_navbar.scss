@@ -1,177 +1,311 @@
 
-
-//
-// NAVIGATION SPECIFIC VARIABLES
-//
-
-
-
-
-// 
-// THE NAVBAR BRAND
-// resoltion dependant
-
-.navbar{
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	height: 3.5rem;
-	background: #fff;
-
+.content-holder{
+	margin-top: 4rem;//navbar spacing
 	@include media-breakpoint-up(lg){
-		height: 5rem;
+		margin-top: 5rem;
 	}
+}
 
-	@include media-breakpoint-up(xl){
-		padding-left: 5rem;
-		padding-right: 5rem;
+
+//
+// Main Navigation
+//
+
+.main-navbar{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 2500;
+	.container-wide{
+		width: 100%;
 	}
-
-	&:after{
-		content: none;
+	.container-fluid{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
 	}
 }
 
 .navbar-brand{
-	min-width: 200px;
-	max-width: 280px;
+	width: 180px; // define sizes..
+	font-weight: 600; //demo
+	letter-spacing: -0.067em; //demo
+	@include media-breakpoint-up(xl){
+		width: 230px;
+		max-width: 230px;
+	}
 }
 
-
-.navbar-toggler-holder{
-	display: flex;
-}
-
-.nav-toggler{
-	margin-right: 0;
-	margin-top: 0;
-	display: block;
-}
 
 
 //
-// NAVIGATION Menu
-// The main navigation menu is a fullscreen view
+// HIDING THE NAV ON SCROLL
 //
-.navigation-holder{
-	width: 100vw;
-	background: $brand-info;
-	color: #fff;
+
+.headroom {
+	transform: translateY(0);
+  	transition: 0.15s ease-out;
+}
+.headroom-hidden {
+  transform: translateY(-100%);
+  transition: 0.15s ease-in;
+}
+
+//
+// HOMEPAGE NAVBAR STYLING
+//
+
+.main-navbar{
+	transition: 0.25s ease-in-out;
+	@include media-breakpoint-up(xl){
+		padding: 0rem;
+		font-size: 1.1em;
+		height: 5rem;
+		align-items: center;
+		padding-top: $spacer;
+		padding-bottom: $spacer;
+	}
+	.nav-item{
+		margin-right: 1.5em;
+		&:last-child{
+			margin-right: 0;
+		}
+	}
+
+	.nav-link{
+		position: relative;
+		font-weight: 400;
+		color: $headings-color;
+
+		&:after{
+			position: absolute;
+			top: 100%;
+			left: 0;
+			width: 100%;
+			height: 4px;
+			background: $brand-primary;
+			content: '';
+			opacity: 0;
+			-webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
+			transition: opacity 0.3s, transform 0.3s;
+			transform: translateY(10px);
+		}
+		&:hover:after{
+			    opacity: 1;
+			    transform: translateY(0px);
+		}
+	}
+}
+
+
+.nav-holder{
 	position: fixed;
-	right: 0;
 	top: 0;
-	min-height: 100vh;
-	transform: translate(100%,0);
-	transition: 0.3s ease-out;
-	z-index: 10000;
-	padding: 3rem;
-
-	h1, h2, h3, h4{
-		color: #fff;
-	}
-
-	h5, h6{
-		color: rgba(255,255,255,0.8);
-	}
-}
-
-.navigation-menu{
-	@include media-breakpoint-up(lg){
-		margin-left: $spacer * 4;
-	}
-	padding-right: $spacer * 4;
-}
-
-.navigation-menu-brand{
-	min-width: 220px;
-	max-width: 250px;
-	margin-left: $spacer * 4;
-}
-
-.navigation-menu-item{
-	margin-bottom: $spacer * 2;
-}
-
-.navigation-menu-active .navigation-holder{ 
-	transform: translate(0,0);
-	transition: 0.3s ease-out;
-}
-
-
-
-// the menu closer
-.navigation-menu-closer{
-	position: absolute;
-	right: 0;
-	top: 0;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	text-align: center;
-	min-width: $spacer * 2;
-	min-height: $spacer *2;
-	padding: 0.5em 1em; 
-	background: #fff;
-}
-
-
-
-// contact data
-.contact-data-holder{
-	position: absolute;
-	right: $spacer * 4;
-	bottom: $spacer * 6;
-}
-
-
-// navigation menu footer
-.navigation-menu-footer{
-	position: absolute;
-	bottom: 0;
 	left: 0;
-	width: 100%;
-	background: none;
-	color: #fff;
-	border-top: 1px solid rgba(255,255,255,0.2);
-	text-align: right;
-}
-
-.footer-content{
-	padding-left: $spacer * 2;
-	padding-right: $spacer * 2;
-
-	@include media-breakpoint-up(lg){
-	padding-left: $spacer * 4;
-	padding-right: $spacer * 4;
+	height: 100vh;
+	width: 360px;
+	flex-wrap: wrap;
+	z-index: 500;
+	transition: 0.3s all;
+	border-right: 1px solid $gray-200;
+	background: #fff;
+	transform: translateX(-100%);
+	overflow-y: auto;
+	-webkit-overflow-scrolling: touch;
+	@include media-breakpoint-down(sm){
+		width: 100vw;
+		padding-bottom: 10rem;
 	}
 }
 
 
-
 //
-// END NAVIGATION MENU
+// STYLE STO ANIMATE THE LOGO POSITION ON ACTIVE MENU
 //
 
+.main-navbar{
+	.container-wide{
+		transition: 0.3s all ease-in-out;
+	}
+}
 
-// Page overlay for closing nav
-.page-overlay{
- 	width: 100%;
- 	height: 100vh;
- 	top: 0;
- 	left: 0;
+.navigation-active{
+	overflow: hidden;
+	.main-navbar{
+		.container-wide{
+			@include media-breakpoint-up(lg){
+				margin-left: $spacer;
+				transition: 0.3s all ease-in-out;
+			}
+		}
+		.navbar-brand{
+			z-index:2000;
+		}
+	}
+	.nav-holder{
+		transform: translateX(0);
+	}
+	.content-overlay{
+		opacity: 1;
+		transform: translateX(0);
+		transition: 0.3s all;
+	}
+}
+
+
+.sidebar-small-footer{
+	display: flex;
+	flex-wrap: wrap;
+
+	.menu-text{
+		width: 100%;
+		transform: rotate(270deg);
+		flex: 1;
+	}
+	.closer{
+		flex: 1;
+		width: 100%;
+	}
+}
+
+
+.content-area{
+	padding: 0;
+}
+
+
+
+.sidebar-nav-hidden{
+	.sidebar-nav{
+	}
+
+	.content-holder{
+		left: 100px;
+		max-width: 100vw;
+		transition: 0.3s all; // need to animate
+	}
+
+	.menu-item-text{
+		opacity: 0;
+		transform: translateX(-100%);
+	}
+}
+
+.nav-main{
+	@include media-breakpoint-down(md){
+		font-size: 1.2em;
+	}
+
+	.nav-link{
+		color: $headings-color;
+		border-left: 5px solid $gray-200;
+		@include hover-focus{
+			color: theme-color("primary");
+			border-left: 5px solid theme-color("primary");
+		}
+
+		@include media-breakpoint-up(xl){
+			padding-left: ($spacer);
+		}
+	}
+}
+
+
+.navbar-search-link{
+	@include media-breakpoint-down(lg){
+		font-size: 1.5em;
+		margin-right: -1em;
+		position: relative;
+		display: block;
+	}
+}
+
+.menu-search-form{
 	position: fixed;
-	min-height: 110vh;
-	background: fade-out($brand-primary, 0.4);
-	opacity: 0;
-	z-index: -1;
-	transition: 0.3s all 0.3s;
+	top: 4rem;
+	right: 0;
+	height: 100vh;
+	width: 100vw;
+	z-index: 200;
+	background: #fff;
+	transform: translateX(100%);
+	transition: 0.3s all ease-in-out;
+	overflow-x: hidden;
+	overflow-y: auto;
+	-webkit-overflow-scrolling: touch;
+	border-top: 1px solid $gray-200;
+	padding-top: $spacer;
+	padding-bottom: 6em;
+
+	@include media-breakpoint-up(xl){
+		width: 50vw;
+		left: 360px;
+		transform: translateX(calc(-100% - 360px));
+		top: 5rem;
+	}
 }
 
-.sidebar-nav-active,
-.afspraak-modal-active{
-	.page-overlay{
-            	opacity: 1;
-            	z-index: 50;
-            	transition: 0.2s all 0.2s;
-            }
+.menu-search-form-active{
+
+	// Hack to prevent bug where input cursor is in wrong place on ios safari
+	@include media-breakpoint-down(lg){
+		position: fixed;
+		transition: 0.3s all;
+	}
+	.nav-holder{
+		background: #fff;
+		@include media-breakpoint-down(lg){
+			transform: translateX(-100%);
+			transition: 0.3s all ease-in-out;
+		}
+	}
+
+	.menu-search-form{
+		transform: translateX(0);
+		transition: 0.3s all ease-in-out;
+	}
+
+	.content-overlay{
+		opacity: 1;
+		transform: translateX(0);
+		transition: 0.3s all;
+	}
+} 
+
+.menu-item img._before, .rtl .menu-item img._after{
+	margin-right: 1em;
 }
+
+.menu-search-close{
+	position: absolute;
+	right: 0;
+	padding: $spacer;
+	font-size: 1.5em;
+	top: 0;
+}
+
+
+
+//
+// GENERAL STUFF
+//
+
+
+.content-overlay{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	z-index: 120;
+	background: fade-out($brand-primary, 0.4);
+	transform: translateX(100%);
+	opacity: 0;
+	transition: 0.3s all ease-in-out;
+	cursor: pointer;
+}
+
