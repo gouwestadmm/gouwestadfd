@@ -1,0 +1,245 @@
+
+
+
+.main{
+    min-height: calc(100vh - 8rem); //navbarheight
+}
+
+section{
+    padding-top: $spacer * 3;
+    padding-bottom: $spacer * 3;
+    @include media-breakpoint-up(lg){
+      padding-top: 6em;
+      padding-bottom: 6em;
+    }
+}
+
+
+.container-mw{
+    max-width: 1500px;
+}
+
+.content-container{
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.to-edge.to-edge-right{
+  @include media-breakpoint-up(sm){
+    margin-right: calc(-16vw - #{$spacer}); // container-narrow 12rem + 2 rem padding
+  }
+}
+
+.to-edge.to-edge-left{
+  @include media-breakpoint-up(sm){
+    margin-left: calc(-16vw - #{$spacer}); // container-narrow 12rem + 2 rem padding
+  }
+}
+
+
+.container-narrow{
+    @include media-breakpoint-up(xl){
+        margin-left: 12vw;
+        margin-right: 12vw;
+    }
+    @include media-breakpoint-up(s-xl){
+        margin-left: 16vw;
+        margin-right: 16vw;
+    }
+
+    .to-edge.to-edge-right{
+      @include media-breakpoint-up(sm){
+        margin-right: calc(-16vw - #{$spacer}); // container-narrow 12rem + 2 rem padding
+      }
+    }
+
+    .to-edge.to-edge-left{
+      @include media-breakpoint-up(sm){
+        margin-left: calc(-16vw - #{$spacer}); // container-narrow 12rem + 2 rem padding
+      }
+    }
+}
+
+//
+// CONTAINER WIDE
+// A full width container with generous padding on the outside
+
+.container-wide{
+    @include media-breakpoint-up(xl){
+        margin-left: 6vw;
+        margin-right: 6vw;
+    }
+    @include media-breakpoint-up(s-xl){
+        margin-left: 8vw;
+        margin-right: 8vw;
+    }
+
+    .to-edge.to-edge-right{
+      @include media-breakpoint-up(sm){
+        margin-right: -8vw; // container-narrow 12rem + 2 rem padding
+      }
+    }
+
+    .to-edge.to-edge-left{
+      @include media-breakpoint-up(sm){
+        margin-left: calc(-8vw - #{$spacer}); // container-narrow 12rem + 2 rem padding
+      }
+    }
+}
+
+
+//
+// CONTAINER EFFECTS
+// offsets and such
+
+.offset-container-effect{
+        padding-top: 6em; // because of no more section on negative top offset
+        padding-bottom: 6em;
+    @include media-breakpoint-up(s-xl){
+        margin-right: 8vw;
+        margin-top: -15em; // negative margin of 
+
+        .container-wide{
+            margin-right: 4vw; // calculations based on margins on original container
+        }
+
+        .container-narrow{
+            margin-right: 8vw;
+        }
+    }
+}
+
+
+
+//
+// BREAK THE GRID
+// align contained items to other edges as a alternative to absolute positioning
+
+.to-edge{
+  flex-grow: 1;
+  max-width: none;
+}
+
+
+
+
+//
+// SIZING BASED ON VH'S AND VW's
+//
+
+// This variable affects the `.vh-*` and `.vw-*` classes.
+$v-sizes: (
+  25: 25,
+  50: 50,
+  75: 75,
+  100: 100
+) !default;
+
+
+// Width and height
+
+@each $prop, $abbrev in (width: vw, height: vh) {
+  @each $size, $length in $v-sizes {
+    .#{$abbrev}-#{$size} { #{$prop}: $length+vh !important; }
+  }
+}
+
+//mixin
+
+
+//
+// MIN-HEIGHTS AND WIDTHS
+//
+
+.mih-100{
+    min-height: 100%;
+}
+
+.mih-100vh{
+    min-height: 100vh;
+}
+
+
+//
+// Aspect ratios
+//
+
+@mixin aspect-ratio($width, $height) {
+    position: relative;
+    &:before{
+        display: block;
+        content: " ";
+        width: 100%;
+        padding-top: ($height / $width) * 100%;
+    }
+    > .intrinsic-ratio--stretch {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+}
+
+// 1:1
+.aspect-ratio-1-1 {
+    @include aspect-ratio(1, 1);
+}
+.aspect-ratio-1-2 {
+    @include aspect-ratio(1, 1.33);
+}
+.aspect-ratio-16-9 {
+    @include aspect-ratio(16, 9);
+}
+.aspect-ratio-21-9 {
+    @include aspect-ratio(21, 9);
+
+}
+.aspect-ratio-24-9 {
+    @include aspect-ratio(24, 9);
+    @include media-breakpoint-down(sm){
+      @include aspect-ratio(1, 1);
+    }
+}
+.aspect-ratio-3-2{
+  @include aspect-ratio(3, 2);
+}
+.aspect-ratio-3-1{
+  @include aspect-ratio(3, 1);
+}
+.aspect-ratio-4-3{
+  @include aspect-ratio(4, 3);
+}
+
+
+//
+// POSTITIONING ATTRIBUTES
+//
+.pos-abs{
+    position: absolute !important;
+}
+
+.pos-lg-abs{
+    @include media-breakpoint-up(lg){
+        position: absolute !important;
+        height: 100%;
+        top: 0;
+
+        &.container-fluid{
+            width: 100%;
+        }
+    }
+}
+
+.pos-rel{
+    position: relative !important;
+}
+
+.pos-lg-rel{
+    @include media-breakpoint-up(lg){
+        position: relative !important;
+
+    }
+}

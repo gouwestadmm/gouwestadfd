@@ -1,0 +1,166 @@
+
+
+.data-image{
+	img{
+		display: none;
+	}
+}
+
+.shadow-img{
+	box-shadow: 0 0 3em rgba(0,0,0,0.25);
+}
+
+.background-image-holder{
+	 //default
+}
+
+.background-image{
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	background-size: cover;
+	background-position: center center;
+ }
+ 
+.data-image{
+ 	img{
+ 		display: none;
+ 	}
+}
+
+
+.bg-cover{
+	background-size: cover;
+}
+
+
+// IMAGE OVERLAYS
+// graddient backgrounds overlayed on images for better text readability 
+
+ .image-overlay{
+ 	position: absolute;
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 100%;
+
+	&.light{
+		background-image: linear-gradient(to top , fade-out(#fff, 0),55%, fade-out(#fff, 1));
+		@include media-breakpoint-up(md) {
+			background-image: linear-gradient(to right , fade-out(#fff, 0.25), 55% , fade-out(#fff, 0.5));
+		}
+	}
+	&.light-vertical{
+		background-image: linear-gradient(to top , fade-out(#fff, 0),55%, fade-out(#fff, 1));
+		@include media-breakpoint-up(md) {
+			background-image: linear-gradient(to top , fade-out(#fff, 0.55), 35% , fade-out(#fff, 1));
+		}
+	}
+	&.light-reversed{
+		background-image: linear-gradient(to top , fade-out(#fff, 0),55%, fade-out(#fff, 1));
+		@include media-breakpoint-up(md) {
+			background-image: linear-gradient(215deg , fade-out(#fff, 0.5), 35% , fade-out(#fff, 1));
+		}
+	}
+	&.darker-vertical{
+		background-image: linear-gradient(to top , fade-out(#111, 0.7),55%, fade-out(#111, 1));
+		@include media-breakpoint-up(md) {
+			background-image: linear-gradient(to top , fade-out(#111, 0.98), 35% , fade-out(#111, 0.5));
+		}
+	}
+	&.dark-vertical{
+		background-image: linear-gradient(to top , fade-out(#111, 0.7),55%, fade-out(#111, 1));
+		@include media-breakpoint-up(md) {
+			background-image: linear-gradient(to top , fade-out(#111, 0.58), 35% , fade-out(#111, 1));
+		}
+	}
+ }
+//
+// VIDEO ICON OVER IMAGE
+//
+
+.video-play-icon{
+	position: absolute;
+	left: $spacer;
+	bottom: $spacer;
+	z-index: 10;
+	font-size: 2em;
+	color: #fff;
+	transition: 0.3s all;
+}
+
+ //
+ // ATTENTION BLOCKS
+ //
+
+ .image-attention-block{
+ 	position: absolute;
+ 	top: -2em;
+ 	right: 0;
+ 	@include media-breakpoint-up(lg){
+ 		right: 8rem;
+ 		top: -3em;
+ 	}
+ }
+
+
+//
+// IMAGE OVERLAYS
+// graddient backgrounds overlayed on images for better text readability 
+
+ .image-overlay{
+ 	position: absolute;
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 100%;
+
+	&.light{
+		background-image: linear-gradient(to top , fade-out(#fff, 0),55%, fade-out(#fff, 1));
+		@include media-breakpoint-up(md) {
+			background-image: linear-gradient(to right , fade-out(#fff, 0.3), 55% , fade-out(#fff, 1));
+		}
+	}
+	&.light-vertical{
+		background-image: linear-gradient(to top , fade-out(#fff, 0),55%, fade-out(#fff, 1));
+		@include media-breakpoint-up(md) {
+			background-image: linear-gradient(to top , fade-out(#fff, 0.35), 35% , fade-out(#fff, 0.65));
+		}
+	}
+	&.light-reversed{
+		background-image: linear-gradient(to top , fade-out(#fff, 0),55%, fade-out(#fff, 1));
+		@include media-breakpoint-up(md) {
+			background-image: linear-gradient(215deg , fade-out(#fff, 0.5), 35% , fade-out(#fff, 1));
+		}
+	}
+	&.dark{
+		background-color: rgba(0,0,0,0.37);
+	}
+	&.dark-vertical{
+		background-image: linear-gradient(to top , fade-out(#111, 0.7),55%, fade-out(#111, 1));
+		@include media-breakpoint-up(md) {
+			background-image: linear-gradient(to top , fade-out(#111, 0.58), 35% , fade-out(#111, 1));
+		}
+	}
+	&.dark-horizontal{
+		background-image: linear-gradient(to right , fade-out(#111, 0.7),55%, fade-out(#111, 1));
+		@include media-breakpoint-up(md) {
+			background-image: linear-gradient(to right , fade-out(#111, 0.58), 35% , fade-out(#111, 1));
+		}
+	}
+ }
+
+ .overlay-content{
+ 	position: absolute;
+ 	left: 50%;
+ 	top: 50%;
+ 	transform: translate(-50%, -50%);
+ }
+
+
+.bg-center{
+	background-position: center center;
+}
+

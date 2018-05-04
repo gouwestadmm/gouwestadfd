@@ -2,7 +2,6 @@
 layout: post
 title: Is mijn hypotheek oversluiten nu interessant?
 subtitle:
-category: hypotheek
 image: /img/home-hero-img.jpg
 ---
 

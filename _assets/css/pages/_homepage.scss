@@ -1,0 +1,70 @@
+//
+// HOMEPAGE HEADER STYLES
+//
+
+.homepage-header{
+	min-height: 80vh;
+	font-size: 1.1em;
+	h1{
+		letter-spacing: -0.075em;
+	}
+	@include media-breakpoint-up(lg){
+		height: 90vh;
+	}
+}
+
+.homepage-hero-image{
+	background-repeat: no-repeat;
+	background-size: 100vw auto;
+	background-position: bottom left;
+	@include media-breakpoint-down(sm){
+		background-position: bottom center;
+		background-size: 155vw auto;
+	}
+}
+
+.attention-banner{
+	position: absolute;
+	top: 0;
+	z-index: 30;
+}
+
+.attention-row{
+	bottom: $spacer * 3;
+}
+
+.float-icon{
+	position: absolute;
+	top: $spacer;
+	right: $spacer;
+}
+
+.site-slogan{
+	@include media-breakpoint-up(lg){
+		h1{
+			font-size: 5vw;
+		}
+		h3{
+			font-size: 1.5vw;
+		}
+	}
+}
+
+
+//
+// SECTION HOMEPAGE PRODUCT CARDS
+//
+
+.home-product-swiper-container{
+	padding-top: $spacer / 2;
+
+	.swiper-wrapper{
+		display: flex;
+	}
+}
+
+.homepage-about{
+	background: url("../img/kids-playing.jpg") no-repeat;
+	background-position: right top;
+	background-size: 60vw auto;
+}
