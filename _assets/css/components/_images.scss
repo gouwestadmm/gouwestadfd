@@ -139,9 +139,9 @@
 		background-color: rgba(0,0,0,0.37);
 	}
 	&.dark-vertical{
-		background-image: linear-gradient(to top , fade-out(#111, 0.7),55%, fade-out(#111, 1));
+		background-image: linear-gradient(to top , fade-out($brand-primary, 0.7),55%, fade-out($brand-primary, 1));
 		@include media-breakpoint-up(md) {
-			background-image: linear-gradient(to top , fade-out(#111, 0.58), 35% , fade-out(#111, 1));
+			background-image: linear-gradient(to top , fade-out($brand-primary, 0.58), 35% , fade-out($brand-primary, 1));
 		}
 	}
 	&.dark-horizontal{
