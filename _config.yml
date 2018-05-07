@@ -15,12 +15,10 @@ include: ['.htaccess']
 # -----
 # Build
 
-version: 3.7.2
-
 assets:
   compress:
     js: false
-  digest: false
+  digest: true
 
 plugins:
   - jekyll-archives

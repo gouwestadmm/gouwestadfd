@@ -25,6 +25,8 @@ Meer zekerheid: als je door onvoorziene omstandigheden de hypotheek niet meer ku
 
 Let erop dat oversluiten naar NHG samen gaat met de financiering van een verbouwing, onderhoud of de isolatie van je woning. Kijk op www.nhg.nl voor alle details en voorwaarden.
 
+
+
 ### Je huidige hypotheekrente is hoger dan 6%
 Is je hypotheekrente hoger dan de huidige rente voor een nieuwe hypotheek? Dan kan oversluiten ook aantrekkelijk zijn.
 

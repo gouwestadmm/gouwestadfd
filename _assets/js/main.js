@@ -9,13 +9,14 @@ $('[data-action=body-action]').click(function(e) {
     $('body').toggleClass(bodyTarget);
 });
 
+
 //
 // NAV TOGGLE
 //
 
 $(".nav-toggle").click(function() {
   $(".nav-toggle").toggleClass("cross");
-  $("body").toggleClass("navigation-active");
+  $("body").toggleClass("navigation-menu-active");
 
   if( $("body").hasClass("menu-search-form-active")){
     $("body").removeClass("menu-search-form-active");
@@ -24,7 +25,7 @@ $(".nav-toggle").click(function() {
 
 $(".navbar-search-link").click(function() {
   $(".nav-toggle").addClass("cross");
-  $("body").addClass("navigation-active");
+  $("body").addClass("navigation-menu-active");
   $("body").addClass("menu-search-form-active");
 });
 
@@ -75,9 +76,6 @@ $(function() {
  });
 
 
-
-
-
 // CLOSE PAGE OVERLAY WHEN BACK BUTTON PRESSED
 // 
 
@@ -97,14 +95,12 @@ function hashNav() {
            }
     }
 
-    //var filterOnLoad = window.location.hash ? (window.location.hash).replace('#', '') : '0';
-    //console.log(filterOnLoad);
-    //$('body').addClass(filterOnLoad);
-
+    var filterOnLoad = window.location.hash ? (window.location.hash).replace('#', '') : '0';
+    console.log(filterOnLoad);
+    $('body').addClass(filterOnLoad);
     // find object based on hash
 };
 
-/*
 if ("onhashchange" in window) {
     console.log("The browser supports the hashchange event!");
 }
@@ -118,17 +114,46 @@ function locationHashChanged() {
     }
 }
 
-window.onhashchange = locationHashChanged();*/
+window.onhashchange = locationHashChanged();
 
 
-//initialize swiper when document ready  
-var homeProductSwiper = new Swiper('.home-product-swiper-container', {
-    // Optional parameters
-    pagination: '.swiper-pagination',
-    slidesPerView: 'auto',
-    paginationClickable: true,
-    nextButton: '.swiper-next',
-    prevButton: '.swiper-prev'
-})
+//
+// CLOUDCANNON AJAX FORM DATA
+// Helper function to get form data in the supported format
+function getFormDataString(formEl) {
+  var formData = new FormData(formEl),
+      data = [];
 
+  for (var keyValue of formData) {
+    data.push(encodeURIComponent(keyValue[0]) + "=" + encodeURIComponent(keyValue[1]));
+  }
 
+  return data.join("&");
+}
+
+// Fetch the form element
+var formEl = document.getElementById("contact-form");
+
+// Override the submit event
+formEl.addEventListener("submit", function (e) {
+  e.preventDefault();
+
+  if (grecaptcha) {
+    var recaptchaResponse = grecaptcha.getResponse();
+    if (!recaptchaResponse) { // reCAPTCHA not clicked yet
+      return false;
+    }
+  }
+
+  var request = new XMLHttpRequest();
+
+  request.addEventListener("load", function () {
+    if (request.status === 302) { // CloudCannon redirects on success
+      // It worked
+    }
+  });
+
+  request.open(formEl.method, formEl.action);
+  request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+  request.send(getFormDataString(formEl));
+});
