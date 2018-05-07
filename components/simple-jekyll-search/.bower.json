@@ -1,0 +1,35 @@
+{
+  "name": "simple-jekyll-search",
+  "version": "1.1.8",
+  "homepage": "http://christian-fei.github.io/Simple-Jekyll-Search/",
+  "authors": [
+    "Christian Fei"
+  ],
+  "description": "Simple Jekyll site search using javascript and json",
+  "main": "dest/jekyll-search.js",
+  "keywords": [
+    "search",
+    "jekyll",
+    "javascript",
+    "json",
+    "simple"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "*",
+    "!dest/jekyll-search.js",
+    "!README.md"
+  ],
+  "moduleType": [
+    "globals"
+  ],
+  "_release": "1.1.8",
+  "_resolution": {
+    "type": "version",
+    "tag": "1.1.8",
+    "commit": "95ecd8133f7c9c665fae77d943dd895a32c42701"
+  },
+  "_source": "https://github.com/christian-fei/Simple-Jekyll-Search.git",
+  "_target": "~1.1.4",
+  "_originalSource": "simple-jekyll-search"
+}
