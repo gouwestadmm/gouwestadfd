@@ -10,7 +10,7 @@
   	.btn-text{
   		position: relative;
   		z-index: 3;
-  		transition: 0.25s all ease-in-out;
+  		transition: 0.25s all cubic-bezier(0.68, -0.55, 0.265, 1.55);
   	}
   	.fa{
   		position: absolute;
@@ -18,7 +18,7 @@
   		top: 50%;
   		transform: translateY(-50%); 	
   		margin-right: 1em;
-  		transition: 0.25s all ease-in-out;
+  		transition: 0.35s all cubic-bezier(0.68, -0.55, 0.265, 1.55);
   	}
 
 	  &:before {
@@ -30,25 +30,25 @@
 	    bottom: 0;
 	    background-color: fade-out($brand-primary, 0.8);
 	    transform: translateX(-100%);
-	    transition: 0.25s all ease-in-out;
+	    transition: 0.25s all cubic-bezier(0.68, -0.55, 0.265, 1.55);
 	    z-index: 1;
 	  }
 
 	  &:hover {
 	  	margin-left: -1em;
 	  	padding-left: 3em;
-	  	transition: 0.25s all ease-in-out;
+	  	transition: 0.35s all cubic-bezier(0.68, -0.55, 0.265, 1.55);
 	    &:before {
 	      transform: translateX(-25%);
-	      transition: 0.35s all ease-in-out;
+	      transition: 0.35s all cubic-bezier(0.68, -0.55, 0.265, 1.55);
 	    }
 	    .btn-text{
 	    	transform: translateX(25%);
-	    	transition: 0.25s all ease-in-out;
+	    	transition: 0.25s all cubic-bezier(0.68, -0.55, 0.265, 1.55);
 	    }
 	    .fa{
 	    	left: 0.5em;
-	    	transition: 0.25s all ease-in-out;
+	    	transition: 0.25s all cubic-bezier(0.68, -0.55, 0.265, 1.55);
 	    }
 	  }
 }

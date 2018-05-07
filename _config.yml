@@ -35,8 +35,6 @@ exclude:
   - LICENCE
   - components/bootstrap/docs
   - components/bootstrap/index.html
-  - sass
-  - css
 
 # Markdown library
 markdown: kramdown

@@ -39,3 +39,28 @@
 		width: 30px;
 	}
 }
+
+
+.overlay-closer{
+	position: absolute;
+	top: $spacer;
+	right: 0;
+	padding: 0.5em 1em;
+	padding-right: $spacer * 1.3; // align with right side of menu
+	background: $brand-primary;
+	color: #fff;
+	transition: 0.15s all ease-out;
+	border-top-left-radius: 3px;
+	border-bottom-left-radius: 3px;
+	z-index: 10;
+
+	&:hover{
+		@include media-breakpoint-up(lg){
+			color: $brand-primary;
+			background: #fff;
+			box-shadow: 0 0 5px rgba(0,0,0,0.1);
+			transform: scale(1.05);
+			transition: 0.15s all ease-in;
+		}
+	}
+}
