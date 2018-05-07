@@ -20,7 +20,7 @@ version: 3.7.2
 assets:
   compress:
     js: false
-  digest: true
+  digest: false
 
 plugins:
   - jekyll-archives
@@ -40,15 +40,8 @@ exclude:
   - sass
   - css
 
-
 # Markdown library
 markdown: kramdown
 #   extensions: ['fenced_code_blocks', 'smart']
 
 host:             0.0.0.0
-
-## Style Options in posts
-
-collections:
- producten:
-  output: true
