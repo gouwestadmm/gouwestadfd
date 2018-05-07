@@ -86,45 +86,28 @@ event-banner: true
 <section class="p-0">
 	<div class="container-fluid m-0">
 		<div class="row">
+			{% for post in site.posts limit:2 %}
 			<div class="col-md-6 col-sm-12">
 			
 				<div class="link-box">
 
 					<div class="background-image data-image">
 						<div class="image-overlay dark-vertical"></div>
-						<img class="" alt="" src="{{ page.image }}">
+						<img class="" alt="" src="{{ post.image }}">
 					</div>
 				
 					<div class="content">
-						<span class="uppercase text-white">hypotheek</span>
-						<h2 class="text-white">Moet ik oversluiten?</h2>
+						<span class="uppercase text-white">{{ post.category }}</span>
+						<h2 class="text-white">{{ post.title }}</h2>
 						<p class="text-white">
-							Met de huidige extreem lage rentestanden lijkt oversluiten voor iedereen interessant, helaas berekenen banken vaak flinke boeterentes indien je wilt oversluiten.
+							{{ post.excerpt | strip_html | strip_newlines | truncate: 120 }}
 						</p>
-						<a href="#" class="btn btn-secondary">Lees meer</a>
+						<a href="{{ post.url }}" class="btn btn-secondary">Lees meer</a>
 					</div>
 				</div>
 				
 			</div>
-			<div class="col-md-6 col-sm-12">
-			
-				<div class="link-box">
-				
-					<div class="background-image data-image">
-						<div class="image-overlay light"></div>
-						<img class="" alt="" src="{{ page.image }}">
-					</div>
-					
-					<div class="content">
-						<span class="uppercase text-primary">verzekeren</span>
-						<h2 class="text-primary">Een zeker woonpakket</h2>
-						<p class="text-primary">
-							Omdat je alles voor je kostbaarste bezit <em>(letterlijk dan he...)</em> toch gewoon goed geregeld wilt hebben.
-						</p>
-						<a href="#" class="btn btn-primary">Lees meer</a>
-					</div>
-				</div>
-			</div>
+			{% endfor %}
 		</div>
 	</div>
 </section>

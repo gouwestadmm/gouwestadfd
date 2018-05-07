@@ -1,25 +1,31 @@
 ---
 layout: post
+category: hypotheek
 title: Is mijn hypotheek oversluiten nu interessant?
 subtitle:
 image: /img/home-hero-img.jpg
 ---
 
-Neem af en toe je hypotheek eens onder de loep. Een kleine moeite die groot voordeel kan opleveren. Hoe pak je dat aan? Controleer of de hypotheekvorm die je jaren geleden hebt gekozen nog past bij je situatie nu. Kijk daarbij ook of je betere voorwaarden en een lagere hypotheekrente kunt krijgen. Oversluiten kan dan soms voordelig zijn, maar in veel gevallen ook niet.
+Met de nog altijd lage rentestanden is het bij ons een veelgestelde vraag, is oversluiten voor mij interessant? Een logische vraag, want het is een kleine moeite die je erg veel voordeel opleveren, maar er ook voor kan zorgen dat je een hypotheek krijgt die beter bij je huidige situatie past.
 
 ---
 
-#Wanneer is oversluiten voordelig?
-Je hypotheek oversluiten doe je niet zomaar. Vandaar dat wij je helpen met criteria, waarmee je kunt bepalen of besparen op je hypotheeklasten mogelijk is.
+### Wanneer is oversluiten voordelig?
+Elke situatie is anders, maar veelal kun je in de volgende gevallen flink besparen op je hypotheeklasten:
 
-###Je hypotheek is maximaal € 265.000,-.
-Je bestaande hypotheek kun je onder voorwaarden omzetten naar een hypotheek met Nationale Hypotheek Garantie (NHG). Dat levert dubbel voordeel op:
+#### Je hypotheek is (inmiddels) lager dan € 265.000,-.
+Dat is namelijk de zogenaamde NHG grens, waaronder je in aanmerking kunt komen voor een hypotheek met Nationale Hypotheek Garantie. En dat levert een dubbel voordeel op:
 
-###Lagere hypotheekrente 
+##### Een Lagere hypotheekrente 
+NHG geeft geldverstrekkers zekerheid over aflossing van de hypotheek, in ruil daarvoor berekenen ze jou een lager rentepercentage.
+
+##### Meer zekerheid
+Ook voor de hypotheeknemer biedt NHG meer zekerheid, want stel dat je door omstandigheden de hypotheek niet meer kunt betalen en er gedwongen verkocht zal moeten gaan worden, dan zal NGH een eventueel tekort (de restschuld) voldoen.
 Meer zekerheid: als je door onvoorziene omstandigheden de hypotheek niet meer kunt betalen, dan kan NHG de restschuld voldoen. Dit geldt alleen als de woning bij gedwongen verkoop te weinig oplevert.
+
 Let erop dat oversluiten naar NHG samen gaat met de financiering van een verbouwing, onderhoud of de isolatie van je woning. Kijk op www.nhg.nl voor alle details en voorwaarden.
 
-###Je huidige hypotheekrente is hoger dan 6%
+### Je huidige hypotheekrente is hoger dan 6%
 Is je hypotheekrente hoger dan de huidige rente voor een nieuwe hypotheek? Dan kan oversluiten ook aantrekkelijk zijn.
 
 ###Je rentevast periode loopt af
@@ -30,3 +36,5 @@ Met een tophypotheek heeft u eigenlijk een te hoge lening voor uw woning als ond
 
 ###Wat kost oversluiten? 
 Bij oversluiten sluit je een nieuwe hypotheek af waarmee je de oude hypotheek aflost. Hieraan zijn kosten verbonden. Denk aan boeterente, taxatiekosten, afsluitkosten en notariskosten. Zijn de besparingen groter dan de oversluitkosten? Overweeg dan je hypotheek om te zetten. Laat altijd eerst een hypotheekadviseur een berekening maken, voordat je een beslissing neemt.
+
+Wij monitoren automatisch
