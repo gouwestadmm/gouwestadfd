@@ -42,7 +42,7 @@
 
 
 .overlay-closer{
-	position: absolute;
+	position: fixed;
 	top: $spacer;
 	right: 0;
 	padding: 0.5em 1em;

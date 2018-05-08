@@ -16,35 +16,14 @@ $('[data-action=body-action]').click(function(e) {
 
 $(".nav-toggle").click(function() {
   $(".nav-toggle").toggleClass("cross");
-  $("body").toggleClass("navigation-menu-active");
+  $("body").toggleClass("navigation-active");
 
-  if( $("body").hasClass("menu-search-form-active")){
-    $("body").removeClass("menu-search-form-active");
-  }
 });
 
 $(".navbar-search-link").click(function() {
   $(".nav-toggle").addClass("cross");
-  $("body").addClass("navigation-menu-active");
+  $("body").addClass("navigation-active");
   $("body").addClass("menu-search-form-active");
-});
-
-$(".video-play-icon").click(function() {
-  var videoSrc = $(this).data("video-src");
-  $("#video-player").attr('src',videoSrc);
-});
-
- $(".video-close-icon").click(function() {
-  $('#video-player').attr('src', $('#video-player').attr('src'));
-});
-
-$(".overlay-content-icon").click(function() {
-  var contentSrc = $(this).data("content-src");
-  $("#content-holder").attr('src',contentSrc);
-});
-
- $(".overlay-content-close-icon").click(function() {
-  $('#content-holder').attr('src', $('#video-player').attr('src'));
 });
 
 
@@ -66,6 +45,16 @@ $(function() {
         }
     });
 });
+
+
+function UserAction() {
+    var xhttp = new XMLHttpRequest();
+    xhttp.open("POST", "Your Rest URL Here", true);
+    xhttp.setRequestHeader("Content-type", "application/json");
+    xhttp.send();
+    var response = JSON.parse(xhttp.responseText);
+}
+
 
 
 // DATA IMAGE FUNCTION

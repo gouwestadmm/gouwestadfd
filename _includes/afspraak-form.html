@@ -14,9 +14,9 @@
 		<div class="confirmation-content px-3 py-3 story story-centered">
 			<h2>Bedankt voor je aanvraag</h2>
 			<h4>We nemen zo snel mogelijk contact met je op!</h4>
-			<p class="lead mt-5">Trouwens... Al overwogen om je aan te melden als woningzoeker? Dan brengen wij je namelijk als eerste op de hoogte van nieuwe woningen in ons bestand die bij jouw wensen passen!</p>
+			<p class="lead mt-5">Trouwens... Als je er over nadenkt om je eigen woning te verkopen, dan komt 1 van de Gouwestad Makelaars graag bij je langs voor een gratis waardebepaling, dan weet je direct wat je woning echt waard is.</p>
 			<div class="mt-5 text-right">
-				<a class="btn btn-light" href="/woningzoeker">Aanmelden als zoeker</a>
+				<a class="btn btn-secondary" href="https://gouwestadmakelaardij.nl" target="_blank">Dit formulier sluiten</a>
 				<a class="btn btn-outline-light" href="#" data-action="body-action" data-action-target="bezichtigings-form-active">Dit formulier sluiten</a>
 			</div>
 		</div>
@@ -25,9 +25,9 @@
       <div class="bezichtiging-form" id="respond">
       	<div class="container-fluid bezichtiging-form-holder">
       		<div class="row story story-centered">
-      			<div class="col-12 mx-auto px-2 px-xl-5 text-center d-none d-sm-block">
-		      		<h4 class="mb-3">Een afspraak maken?</h4>
-		        </div>
+      			<div class="col-12">
+      				<h5 class="text-center">Een afspraak maken</h5>
+      			</div>
 
 		        <form class="form" id="bezichtiging-form" method="post" action="/bedankt" style="height: 0; overflow:hidden;">
 
@@ -36,7 +36,7 @@
 
 		        	<div class="form-group mb-3 mb-xl-4">
 		        		<label class="label form-control-label" for="name">Naam:</label>
-		          		<input class="form-control" type="text" name="message_name" cf-input-placeholder="Vul je naam in?" cf-questions="Wat is je naam?" id="naam" value="naam">
+		          		<input class="form-control" type="text" name="message_name" cf-input-placeholder="Vul je naam in?" cf-questions="Wat is je naam?" id="naam" value="">
 		          	</div>
 
 		          	<div class="form-group mb-3 mb-xl-4">
@@ -51,7 +51,7 @@
 
 		          	<div class="form-group mb-3 mb-xl-4">
 		          		<label class="form-control-label" for="message_text">Bericht:</label>
-		          		<textarea class="form-control" name="message_text" cf-questions="Heb je nog andere vragen of opmerkingen?" rows="5"></textarea>
+		          		<textarea class="form-control" name="message_text" cf-questions="Waarvoor wil je langskomen?" rows="5"></textarea>
 		          	</div>
 
 				  	<input type="hidden" name="_to" value="lex@gouwestad.com">
@@ -60,7 +60,7 @@
 		        </form>
 		        <div id="cf-context" class="cf-form-holder col-12 dark-theme mx-auto px-0 px-sm-2 px-xl-5 " role="cf-context" cf-context></div>
 		        <div class="col-12 px-sm-2 px-xl-5">
-		        	<p class="mt-1 mb-1 subtitle"><em>Wij zijn ook bereikbaar op <a>0182 – 63 60 21</a></em></p>
+		        	<p class="mt-1 mb-1 subtitle"><em>Wij zijn ook bereikbaar op <a>0182 - 61 89 08</a></em></p>
 		        </div>
 		    </div>
 		</div>
@@ -71,19 +71,15 @@
 
 <div class="contact-attention-section">
 
-	<div class="attention-content">
+	<div class="attention-content w-100">
 
 		<div class="background-image-holder aspect-ratio-16-9 bg-cover bg-center" style="background-image: url('{{ page.image }}')">
 		</div>
-		<?php endif; ?>
 		<div class="property-titles p-lg-5">
 	  		<h3 class="property-title entry-title mb-0 mb-lg-3">
-	  		
+	  			Een afspraak maken
 	  		</h3>
-	  		<div class="property_price_holder">
-          		<h3 class="text-primary mb-0">
-	            </h3>
-	      </div>
+	  		<p>Vul je gegevens in en we nemen zo snel mogelijk contact met je op. En wees gerust, een eerste afspraak is altijd helemaal vrijblijvend.</p>
 	  	</div>
 	</div>
 </div>
