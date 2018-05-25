@@ -52,7 +52,7 @@
 	transition: 0.15s all ease-out;
 	border-top-left-radius: 3px;
 	border-bottom-left-radius: 3px;
-	z-index: 10;
+	z-index: 1000;
 
 	&:hover{
 		@include media-breakpoint-up(lg){
