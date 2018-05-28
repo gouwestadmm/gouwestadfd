@@ -60,7 +60,7 @@
 				  	<input type="text" name="_gotcha" style="display: none;">
 						
 					<input type="submit" value="Send Message">
-					
+
 		        </form>
 		        <div id="cf-context" class="cf-form-holder col-12 dark-theme mx-auto px-0 px-sm-2 px-xl-5 " role="cf-context" cf-context></div>
 		        <div class="col-12 px-sm-2 px-xl-5">
@@ -81,18 +81,6 @@
 	        formEl: document.getElementById("bezichtiging-form"),
 	        context: document.getElementById("cf-context"),
 	        robotImage: "/img/logo-mark.svg",
-	        submitCallback: function() {
-	            $.ajax({
-		            type: 'post',
-		            url: '#',
-		            data: $('#bezichtiging-form').serialize(),
-		            success: function () {
-		            	window.ConversationalForm.addRobotChatResponse("Bedankt voor je aanmelding.");
-            			window.ConversationalForm.addRobotChatResponse("We nemen zo snel mogelijk contact met je op.");
-		              	$("#bezichtiging-confirmation").addClass("active");
-		              	console.log("form send");
-		            }
-		        });
 	    	},
 		    dictionaryData: {
 		        "entry-not-found": "We hebben je invoer niet gevonde",
