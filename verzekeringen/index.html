@@ -1,5 +1,6 @@
 ---
 layout: default
+title: Verzekeringen
 image: /img/beschermen.jpg
 ---		
 
@@ -22,7 +23,7 @@ image: /img/beschermen.jpg
 	</figure>
 	<div class="image-attention-block bg-primary dark-bg p-3 p-xl-4 d-flex flex-column justify-content-between">
 		<h5 class="mb-5 text-light">Hoeveel kun je financieren?</h5>
-		<h6><a class="text-white" href="/berekenen">Bereken het direct</a></h6>
+		<h6><a class="text-white" href="/zelf-berekenen/max-hypotheek">Bereken het direct</a></h6>
 	</div>
 </div>
 
@@ -35,8 +36,9 @@ image: /img/beschermen.jpg
 				<p class="lead">Al ruim 30 jaar beschermen wij onze klanten en hun toekomst. Verzekeren doen wij niet alleen omdat het moet, maar omdat je wilt beschermen wat je lief is.</p>
 			</div>
 			<div class="col-sm-8 col-lg-6 offset-lg-1">
-				<p>Persoonlijke aandacht en luisteren naar wat jij, als klant, belangrijk vindt. Zodat je met een vertrouwd gevoel naar de toekomst kunt kijken. Volledig onaf<br><br>
-					<b>En het mooiste, dat gaat bij ons gewoon samen met scherpe premies.</b>
+				<p>Persoonlijke aandacht en luisteren naar wat jij, als klant, belangrijk vindt. Zodat je met een vertrouwd gevoel naar de toekomst kunt kijken met een verzekeringspakket dat bij je past. Dat geld niet alleen nu, maar ook voor later. Wij monitoren namelijk dagelijks of je huidige producten nog wel de juiste en/of voordeligste voor je zijn.<br><br>
+				
+				<b>En het mooiste, dat gaat bij ons gewoon samen met scherpe premies.</b>
 				</p>
 				<p></p>
 			</div>
@@ -46,28 +48,28 @@ image: /img/beschermen.jpg
 
 <section class="insurance-products bg-light">
 	<div class="container-fluid swiper-container-holder overflow-hidden">
-		<div class="container-wide">
+		<div class="container-narrow">
 			<div class="row">
 				<div class="col mb-5">
-					<h2>Wij adviseren in</h2>
+					<h2>Wij adviseren o.a. in</h2>
 				</div>
 			</div>
 		</div>
 		<div class="row">
 			<div class="swiper-container container product-cards-container">
-				<div class="swiper-wrapper product-cards-group">
+				<div class="swiper-wrapper product-cards-group pb-5">
 
 					{% for product in site.data.verzekeringsproducten %}
 					<div class="swiper-slide col-11 col-sm-7 col-xl-4 d-flex align-items-stretch">
-						<div class="card w-100 bg-white">
+						<div class="card py-3 w-100 bg-white shadow-sm">
 							<div class="card-body text-center text-xl-left">
 								<div class="row align-items-center">
-									<div class="col-12 col-xl-6 text-xl-center">
+									<div class="col-12 col-xl-5 text-xl-center">
 										<i class="fal fa-{{ product.icon }} fa-4x text-primary mb-3"></i>
 										<h5 class="mb-2 mb-xl-0"><strong>{{ product.naam }}</strong></h5>
 									</div>
-									<div class="col-12 col-xl-6">
-										<ul class="list-unstyled mb-0">
+									<div class="col-12 col-xl-7">
+										<ul class="mb-0">
 											{% for item in product.onderdelen %}
 											<li>{{ item }}</li>
 											{% endfor %}
@@ -111,28 +113,11 @@ image: /img/beschermen.jpg
 			<div class="col-sm-8">
 				<h2>Over ons</h2>
 				<p class="lead">Het gemak en de duidelijkheid van <strong>nu</strong> met het plezier van een lokaal kantoor waar je gewoon naar binnen kunt lopen. Dat is iets waar we trots op zijn. En zeg nou zelf, voor zulke belangrijke zaken is een persoonlijk aanspreekpunt wel zo fijn toch?</p>
-				<a href="/over-ons">Meer over ons</a>
+				<a class="btn btn-0" href="/over-ons"><strong><span class="fal fa-angle-right"></span><span class="btn-text pl-2">Meer over ons</span></strong></a>
 			</div>
 		</div>
 	</div>
 </section>
-
-
-<section class="strip">
-	<div class="container">
-		<div class="row">
-			<div class="col-sm-8 col-xs-12 pull-left">
-				<h3 class="text-info"><strong>Vrijblijvend langskomen.</strong> Neem contact met ons op</h3>
-			</div>
-			
-			<div class="col-sm-4 col-xs-12 pull-right text-xs-right">
-				<a href="#" class="btn btn-primary">afspraak aanvragen</a>
-			</div>
-		</div>
-	</div>
-</section>
-
-
 
 
 

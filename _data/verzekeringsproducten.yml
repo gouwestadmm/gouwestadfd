@@ -20,24 +20,30 @@
     - Boot
     - Oldtimer
 - naam: Recht
-  icon: legal
+  icon: gavel
   onderdelen:
     - Rechtsbijstand
     - Aansprakelijkheid
 - naam: Inkomen
-  icon: legal
+  icon: credit-card
   onderdelen:
     - Arbeidsongeschiktheid
     - Ongevallen
     - Woonlasten
 - naam: Vermogen
-  icon: legal
+  icon: piggy-bank
   onderdelen:
     - Sparen
     - Beleggen
 - naam: Pensioen
-  icon: legal
+  icon: golf-club
   onderdelen:
     - Lijfrente
     - Oudedagspensioen
     - Nabestaandenpensioen
+- naam: Zorg en Welzijn
+  icon: file-medical
+  onderdelen:
+    - Uitvaart
+    - Ziektekosten
+    - Zorg
