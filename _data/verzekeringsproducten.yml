@@ -12,10 +12,32 @@
     - Bromfiets
     - Fiets
 - naam: Vrije Tijd
-  icon: plane
+  icon: plane-alt
   onderdelen:
     - Reis
     - Annulering
     - Caravan
     - Boot
     - Oldtimer
+- naam: Recht
+  icon: legal
+  onderdelen:
+    - Rechtsbijstand
+    - Aansprakelijkheid
+- naam: Inkomen
+  icon: legal
+  onderdelen:
+    - Arbeidsongeschiktheid
+    - Ongevallen
+    - Woonlasten
+- naam: Vermogen
+  icon: legal
+  onderdelen:
+    - Sparen
+    - Beleggen
+- naam: Pensioen
+  icon: legal
+  onderdelen:
+    - Lijfrente
+    - Oudedagspensioen
+    - Nabestaandenpensioen

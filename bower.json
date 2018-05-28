@@ -23,7 +23,7 @@
     "jquery": "~3.0.0"
   },
   "devDependencies": {
-    "Swiper": "swiper#~3.2.7",
+    "Swiper": "latest",
     "bootstrap": "4.1.0",
     "fastclick": "latest"
   },

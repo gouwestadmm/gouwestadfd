@@ -19,14 +19,14 @@ module.exports = function (grunt) {
                 command: 'jekyll build'
             },
             jekyllServe: {
-                command: 'jekyll serve'
+                command: 'jekyll serve --drafts --incremental'
             }
         },
 
         // watch for files to change and run tasks when they do
         watch: {
             sass: {
-                files: ['_sass/**/*.{scss,sass}'],
+                files: ['assets/css/**/*.{scss,sass}'],
                 tasks: ['sass']
             }
         },
@@ -36,13 +36,13 @@ module.exports = function (grunt) {
             options: {
                 sourceMap: true,
                 outputStyle: 'expanded',
-                sassDir: '_sass',
+                sassDir: 'assets/css',
                 cssDir: 'css'
             },
             build: {
                 files: [{
                     expand: true,
-                    cwd: '_sass/',
+                    cwd: 'assets/css/',
                     src: ['**/*.{scss,sass}'],
                     dest: 'css',
                     ext: '.css'
@@ -115,6 +115,7 @@ module.exports = function (grunt) {
         concurrent: {
             serve: [
                 'sass',
+                'autoprefixer',
                 'watch',
                 'shell:jekyllServe'
                 ],
@@ -132,7 +133,6 @@ module.exports = function (grunt) {
 
     // Register the grunt build task
     grunt.registerTask('build', [
-        'shell:jekyllBuild',
         'sass',
         'autoprefixer',
         'useminPrepare',

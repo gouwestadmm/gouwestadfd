@@ -25,7 +25,7 @@ GEM
     http_parser.rb (0.6.0)
     i18n (0.9.5)
       concurrent-ruby (~> 1.0)
-    jekyll (3.7.2)
+    jekyll (3.8.1)
       addressable (~> 2.4)
       colorator (~> 1.0)
       em-websocket (~> 0.5)
@@ -109,7 +109,7 @@ PLATFORMS
   x64-mingw32
 
 DEPENDENCIES
-  jekyll (= 3.7.2)
+  jekyll (= 3.8.1)
   jekyll-archives (= 2.1.1)
   jekyll-assets
   jekyll-feed (= 0.8.0)
@@ -120,4 +120,4 @@ DEPENDENCIES
   uglifier
 
 BUNDLED WITH
-   1.16.1
+   1.16.2

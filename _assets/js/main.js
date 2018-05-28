@@ -46,17 +46,6 @@ $(function() {
     });
 });
 
-
-function UserAction() {
-    var xhttp = new XMLHttpRequest();
-    xhttp.open("POST", "Your Rest URL Here", true);
-    xhttp.setRequestHeader("Content-type", "application/json");
-    xhttp.send();
-    var response = JSON.parse(xhttp.responseText);
-}
-
-
-
 // DATA IMAGE FUNCTION
 // general function for toggling stuff via data-attributes
   $('.data-image').each(function(){
@@ -65,43 +54,23 @@ function UserAction() {
  });
 
 
-//
-// CLOUDCANNON AJAX FORM DATA
-// Helper function to get form data in the supported format
-function getFormDataString(formEl) {
-  var formData = new FormData(formEl),
-      data = [];
 
-  for (var keyValue of formData) {
-    data.push(encodeURIComponent(keyValue[0]) + "=" + encodeURIComponent(keyValue[1]));
-  }
-
-  return data.join("&");
-}
-
-// Fetch the form element
-var formEl = document.getElementById("contact-form");
-
-// Override the submit event
-formEl.addEventListener("submit", function (e) {
-  e.preventDefault();
-
-  if (grecaptcha) {
-    var recaptchaResponse = grecaptcha.getResponse();
-    if (!recaptchaResponse) { // reCAPTCHA not clicked yet
-      return false;
-    }
-  }
-
-  var request = new XMLHttpRequest();
-
-  request.addEventListener("load", function () {
-    if (request.status === 302) { // CloudCannon redirects on success
-      // It worked
-    }
-  });
-
-  request.open(formEl.method, formEl.action);
-  request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-  request.send(getFormDataString(formEl));
-});
+//initialize swiper when document ready  
+var defaultSwiper = new Swiper('.swiper-container', {
+    pagination: {
+       el: '.swiper-pagination',
+       type: 'bullets',
+       clickable: true,
+    },
+    slidesPerView: 'auto',
+    paginationClickable: true,
+    spaceBetween: 0,
+    navigation: {
+        nextEl: '.slider-btn-next',
+        prevEl: '.slider-btn-prev',
+    },
+    slideVisible: '.slide-visible',
+    loop: false,
+    watchSlidesProgress: true,
+    watchSlidesVisibility: true
+})

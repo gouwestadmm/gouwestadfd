@@ -45,18 +45,19 @@ image: /img/beschermen.jpg
 </section>
 
 <section class="insurance-products bg-light">
-	<div class="container-fluid container-wide">
+	<div class="container-fluid swiper-container-holder overflow-hidden">
 		<div class="row">
-			<div class="">
-				<h2>Verzekeringen</h2>
+			<div class="col mb-5">
+				<h2>Wij adviseren in</h2>
 			</div>
 		</div>
-		<div class="swiper-container">
-			<div class="swiper-wrapper">
+		<div class="row">
+			<div class="swiper-container container product-cards-container">
+				<div class="swiper-wrapper product-cards-group">
 
 					{% for product in site.data.verzekeringsproducten %}
-					<div class="col-11 col-sm-5 col-xl-3">
-						<div class="card bg-white">
+					<div class="swiper-slide col-11 col-sm-7 col-xl-4 d-flex align-items-stretch">
+						<div class="card w-100 bg-white">
 							<div class="card-body text-center text-xl-left">
 								<div class="row align-items-center">
 									<div class="col-12 col-xl-6 text-xl-center">
@@ -76,9 +77,26 @@ image: /img/beschermen.jpg
 					</div>
 					{% endfor %}
 
-			</div><!-- swiper-wrapper -->
-		</div><!--swiper-container-->
+				</div><!-- swiper-wrapper -->
 
+				<!-- Add Pagination -->
+	    		<div class="swiper-pagination mt-3"></div>
+	    		<!-- Add Arrows -->
+				<div class="slider-btn slider-btn-prev">
+					<span class="fa-stack fa-lg">
+					 	<i class="fal fa-circle fa-stack-2x"></i>
+					 	<i class="fal fa-angle-left fa-stack-1x"></i>
+					</span>
+				</div>
+				<div class="slider-btn slider-btn-next">
+					<span class="fa-stack fa-lg">
+					 	<i class="fal fa-circle fa-stack-2x"></i>
+					 	<i class="fal fa-angle-right fa-stack-1x"></i>
+					</span>
+				</div>
+
+			</div><!--swiper-container-->
+		</div>
 	</div>
 </section>
 
@@ -97,52 +115,6 @@ image: /img/beschermen.jpg
 	</div>
 </section>
 
-
-<section class="bg-info-muted p-a-0">
-	<div class="container-fluid m-a-0">
-		<div class="row">
-			<div class="col-md-6 col-sm-12">
-			
-				<div class="link-box">
-
-					<div class="background-image data-image">
-						<div class="image-overlay info"></div>
-						<img class="" alt="" src="{{ page.image }}">
-					</div>
-				
-					<div class="content">
-						<span class="uppercase text-white">hypotheek</span>
-						<h2 class="text-white">Moet ik oversluiten?</h2>
-						<p class="text-white">
-							Met de huidige extreem lage rentestanden lijkt oversluiten voor iedereen interessant, helaas berekenen banken vaak flinke boeterentes indien je wilt oversluiten.
-						</p>
-						<a href="#" class="btn btn-secondary">Lees meer</a>
-					</div>
-				</div>
-				
-			</div>
-			<div class="col-md-6 col-sm-12">
-			
-				<div class="link-box">
-				
-					<div class="background-image data-image">
-						<div class="image-overlay light"></div>
-						<img class="" alt="" src="{{ page.image }}">
-					</div>
-					
-					<div class="content">
-						<span class="uppercase text-primary">verzekeren</span>
-						<h2 class="text-info">Een zeker woonpakket</h2>
-						<p class="text-primary">
-							Omdat je alles voor je kostbaarste bezit <em>(letterlijk dan he...)</em> toch gewoon goed geregeld wilt hebben.
-						</p>
-						<a href="#" class="btn btn-primary">Lees meer</a>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</section>
 
 <section class="strip">
 	<div class="container">

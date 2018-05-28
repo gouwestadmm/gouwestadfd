@@ -15,12 +15,18 @@ include: ['.htaccess']
 # -----
 # Build
 
+assets:
+  compress:
+    js: false
+  digest: true
+
 plugins:
   - jekyll-archives
   - jekyll-sitemap
   - jekyll-seo-tag
   - jekyll-feed
   - jekyll-paginate
+  - jekyll-assets
 
 exclude:
   - Gemfile

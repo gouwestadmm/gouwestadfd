@@ -6,12 +6,13 @@
 @import "utils/_variables";
 @import "../components/bootstrap/scss/bootstrap";
 
+@import "utils/swiper";
+
 @import "base/type";
 @import "base/bordered-type";
 @import "base/grid";
 @import "base/background-colors";
 
-@import "../components/Swiper/dist/css/swiper.css";
 @import "components/sidebar"; // berekentools overlay
 @import "components/calculator"; // berekentools overlay
 
@@ -31,6 +32,7 @@
 @import "components/highlight";
 
 @import "components/afspraak-modal";
+@import "components/sliders";
 
 @import "layout/layout";
 @import "layout/header";

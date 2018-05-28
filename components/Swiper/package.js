@@ -1,4 +1,4 @@
-var version = '3.2.7';
+var version = '4.2.0';
 
 Package.describe({
   name: 'nolimits4web:swiper',
@@ -15,10 +15,6 @@ Package.onUse(function (api) {
     'dist/js/swiper.js'
     ], ['client']
   );
-
-  // Since swiper is attached to window, we do not need to export Swiper
-  // api.export('Swiper');
 });
 
-Package.onTest(function (api) {
-});
+Package.onTest(function (api) {});
