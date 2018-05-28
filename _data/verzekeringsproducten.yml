@@ -1,0 +1,21 @@
+- naam: Wonen
+  icon: home
+  onderdelen:
+    - Inboedel
+    - Opstal
+    - Kostbaarheden
+- naam: Vervoer
+  icon: car
+  onderdelen:
+    - Auto
+    - Motor
+    - Bromfiets
+    - Fiets
+- naam: Vrije Tijd
+  icon: plane
+  onderdelen:
+    - Reis
+    - Annulering
+    - Caravan
+    - Boot
+    - Oldtimer

@@ -57,6 +57,16 @@ function locationHashChanged() {
 
 window.onhashchange = locationHashChanged();*/
 
+//initialize swiper when document ready  
+var defaultSwiper = new Swiper('.swiper-container', {
+    // Optional parameters
+    pagination: '.swiper-pagination',
+    slidesPerView: 'auto',
+    paginationClickable: true,
+    nextButton: '.swiper-next',
+    prevButton: '.swiper-prev'
+})
+
 
 //initialize swiper when document ready  
 var homeProductSwiper = new Swiper('.home-product-swiper-container', {

@@ -7,7 +7,7 @@ image: /img/beschermen.jpg
 	<div class="container-wide container-fluid w-auto">
 		<div class="row">
 			<div class="col-12 mt-xl-5 pt-5 pb-5">
-				<h4 class="text-primary">Verzekeringen</h4>
+				<h4 class="text-primary"><i class="fal fa-car"></i> <span class="pl-2">Verzekeringen</span></h4>
 				<h1 class="mb-0">Omdat je wilt beschermen wat je lief is</h1>
 			</div>
 		</div>
@@ -35,16 +35,52 @@ image: /img/beschermen.jpg
 				<p class="lead">Al ruim 30 jaar beschermen wij onze klanten en hun toekomst. Verzekeren doen wij niet alleen omdat het moet, maar omdat je wilt beschermen wat je lief is.</p>
 			</div>
 			<div class="col-sm-8 col-lg-6 offset-lg-1">
-				<p>Persoonlijke aandacht en luisteren naar wat jij, als klant, belangrijk vindt. Zodat je met een vertrouwd gevoel naar de toekomst kunt kijken. <br><br>
+				<p>Persoonlijke aandacht en luisteren naar wat jij, als klant, belangrijk vindt. Zodat je met een vertrouwd gevoel naar de toekomst kunt kijken. Volledig onaf<br><br>
 					<b>En het mooiste, dat gaat bij ons gewoon samen met scherpe premies.</b>
 				</p>
-				<p>Wel zo fijn als je in zulke hectische tijden zekerheid hebt over je financiele mogelijkheden en weet dat er iemand meekijkt die het hoofd koel houdt. Op die manier willen we je niet alleen zorgen uit handen nemen, maar willen we er vooral voor zorgen dat je droomwoning niet alleen nu een droomwoning is, maar ook in toekomst een plek blijft waar je met veel plezier en zekerheid kunt wonen.</p>
-				<p><strong>Denk je na over het kopen van een woning, stap dan gewoon eens bij ons binnen, dan vertellen we je graag, helemaal vrijblijvend, over onze aanpak.</strong></p>
+				<p></p>
 			</div>
 		</div>
 	</div>
 </section>
 
+<section class="insurance-products bg-light">
+	<div class="container-fluid container-wide">
+		<div class="row">
+			<div class="">
+				<h2>Verzekeringen</h2>
+			</div>
+		</div>
+		<div class="swiper-container">
+			<div class="swiper-wrapper">
+
+					{% for product in site.data.verzekeringsproducten %}
+					<div class="col-11 col-sm-5 col-xl-3">
+						<div class="card bg-white">
+							<div class="card-body text-center text-xl-left">
+								<div class="row align-items-center">
+									<div class="col-12 col-xl-6 text-xl-center">
+										<i class="fal fa-{{ product.icon }} fa-4x text-primary mb-3"></i>
+										<h5 class="mb-2 mb-xl-0"><strong>{{ product.naam }}</strong></h5>
+									</div>
+									<div class="col-12 col-xl-6">
+										<ul class="list-unstyled mb-0">
+											{% for item in product.onderdelen %}
+											<li>{{ item }}</li>
+											{% endfor %}
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					{% endfor %}
+
+			</div><!-- swiper-wrapper -->
+		</div><!--swiper-container-->
+
+	</div>
+</section>
 
 <section>
 	<div class="huge-background-icon right">
@@ -59,10 +95,6 @@ image: /img/beschermen.jpg
 			</div>
 		</div>
 	</div>
-</section>
-
-<section class="insurance-product-cards">
-	
 </section>
 
 
