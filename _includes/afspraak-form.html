@@ -31,7 +31,7 @@
       				<h5 class="text-center">Een afspraak maken</h5>
       			</div>
 
-		        <form class="form" id="bezichtiging-form" method="post" action="/bedankt" style="height: 0; overflow:hidden;">
+		        <form class="form" id="bezichtiging-form" method="post" action="/" style="height: 0; overflow:hidden;">
 
 		        	<cf-robot-message cf-questions="Hallo. Je wilt graag een (vrijvblijvende) afspraak met ons maken."></cf-robot-message>
   					<cf-robot-message cf-questions="Als je hier je gegevens invult, dan nemen wij zo snel mogelijk contact met je op"></cf-robot-message>
@@ -80,6 +80,19 @@
 	        formEl: document.getElementById("bezichtiging-form"),
 	        context: document.getElementById("cf-context"),
 	        robotImage: "/img/logo-mark.svg",
+	        submitCallback: function() {
+	            $.ajax({
+		            type: 'post',
+		            url: '#',
+		            data: $('#bezichtiging-form').serialize(),
+		            success: function () {
+		            	window.ConversationalForm.addRobotChatResponse("Bedankt voor je aanmelding.");
+            			window.ConversationalForm.addRobotChatResponse("We nemen zo snel mogelijk contact met je op.");
+		              	$("#bezichtiging-confirmation").addClass("active");
+		              	console.log("form send");
+		            }
+		        });
+	    	},
 		    dictionaryData: {
 		        "entry-not-found": "We hebben je invoer niet gevonde",
 		        "input-placeholder": "Vul hier je antwoord in ...",
@@ -106,6 +119,40 @@
 		    }// empty will throw error
 		});
 	};
+
+
+	// Helper function to get form data in the supported format
+	function getFormDataString(formEl) {
+	  var formData = new FormData(formEl),
+	      data = [];
+
+	  for (var keyValue of formData) {
+	    data.push(encodeURIComponent(keyValue[0]) + "=" + encodeURIComponent(keyValue[1]));
+	  }
+
+	  return data.join("&");
+	}
+
+	// Fetch the form element
+	var formEl = document.getElementById("contact-form");
+
+	// Override the submit event
+	formEl.addEventListener("submit", function (e) {
+	  e.preventDefault();
+
+	  var request = new XMLHttpRequest();
+
+	  request.addEventListener("load", function () {
+	    if (request.status === 302) { // CloudCannon redirects on success
+	      // It worked
+	    }
+	  });
+
+	  request.open(formEl.method, formEl.action);
+	  request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+	  request.send(getFormDataString(formEl));
+	});
+
 })(jQuery);
 	
 </script>
