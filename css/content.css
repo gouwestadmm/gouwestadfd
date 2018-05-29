@@ -4,6 +4,10 @@ p.callout { /* Can be applied to blocks of content */
   background-color: #eee;
 }
 
+img.wide{
+    background: #222;
+}
+
 span.big-blue-text { /* Can be applied to inline content */
   font-size: 2rem;
   color: blue;
