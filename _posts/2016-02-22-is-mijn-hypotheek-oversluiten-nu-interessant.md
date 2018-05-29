@@ -26,7 +26,7 @@ Dat is namelijk de zogenaamde NHG grens, waaronder je in aanmerking kunt komen v
 NHG geeft geldverstrekkers zekerheid over aflossing van de hypotheek, in ruil daarvoor berekenen ze jou een lager rentepercentage.
 {: .present-before-paste}
 
-![](/img/beschermen.jpg)
+![This is a test description](/img/beschermen.jpg)
 {: .callout}
 
 ##### Meer zekerheid
