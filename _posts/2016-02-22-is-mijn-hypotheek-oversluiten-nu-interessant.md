@@ -16,14 +16,9 @@ Met de nog altijd lage rentestanden is het bij ons een veelgestelde vraag, is ov
 Elke situatie is anders, maar veelal kun je in de volgende gevallen flink besparen op je hypotheeklasten:
 {: .present-before-paste}
 
-#### &lt;div class="bg-light"&gt;
-
 #### Je hypotheek is (inmiddels) lager dan € 265.000,-.
 
 Dat is namelijk de zogenaamde NHG grens, waaronder je in aanmerking kunt komen voor een hypotheek met Nationale Hypotheek Garantie. En dat levert een dubbel voordeel op:
-{: .present-before-paste}
-
-&lt;/div&gt;
 {: .present-before-paste}
 
 ##### Een Lagere hypotheekrente
