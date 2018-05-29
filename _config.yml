@@ -44,5 +44,10 @@ markdown: kramdown
 host:             0.0.0.0
 
 _options:
+  _block:
+    left: align-left
+    center: center-this-text
+    right: align-right
+    justify: full-width-text
   content:
     styles: /css/content.css
