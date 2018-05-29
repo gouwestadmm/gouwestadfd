@@ -88,7 +88,10 @@
 		            success: function () {
 		            	window.ConversationalForm.addRobotChatResponse("Bedankt voor je aanmelding.");
             			window.ConversationalForm.addRobotChatResponse("We nemen zo snel mogelijk contact met je op.");
-		              	$("#bezichtiging-confirmation").addClass("active");
+            			var $el = $("#bezichtiging-confirmation");
+					    setTimeout(function () {
+					        $el.addClass('active');
+					    }, 1000);
 		              	console.log("form send");
 		            }
 		        });
