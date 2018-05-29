@@ -50,7 +50,7 @@ _options:
   _text:
     italic: true
   _block:
-    format: p h3
+    format: p h3 d-flex
     undo: true
     redo: true
   content:
