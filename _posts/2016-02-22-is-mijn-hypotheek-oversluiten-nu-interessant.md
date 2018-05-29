@@ -6,10 +6,8 @@ subtitle:
 image: /img/home-hero-img.jpg
 ---
 
-```
 Met de nog altijd lage rentestanden is het bij ons een veelgestelde vraag, is oversluiten voor mij interessant? Een logische vraag, want het is een kleine moeite die je erg veel voordeel opleveren, maar er ook voor kan zorgen dat je een hypotheek krijgt die beter bij je huidige situatie past.
-```
-{: .present-before-paste}
+{: .callout}
 
 ---
 
