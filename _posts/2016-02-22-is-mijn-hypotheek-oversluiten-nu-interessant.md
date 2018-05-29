@@ -27,7 +27,7 @@ NHG geeft geldverstrekkers zekerheid over aflossing van de hypotheek, in ruil da
 {: .present-before-paste}
 
 ![](/img/beschermen.jpg)
-{: .present-before-paste}
+{: .callout}
 
 ##### Meer zekerheid
 
