@@ -25,7 +25,8 @@
   "devDependencies": {
     "Swiper": "latest",
     "bootstrap": "4.1.0",
-    "fastclick": "latest"
+    "fastclick": "latest",
+    "headroom": "latest"
   },
   "resolutions": {
     "jquery": ">=1.7"

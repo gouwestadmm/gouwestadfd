@@ -35,12 +35,6 @@
   onderdelen:
     - Sparen
     - Beleggen
-- naam: Pensioen
-  icon: golf-club
-  onderdelen:
-    - Lijfrente
-    - Oudedagspensioen
-    - Nabestaandenpensioen
 - naam: Zorg en Welzijn
   icon: file-medical
   onderdelen:

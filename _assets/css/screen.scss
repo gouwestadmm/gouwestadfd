@@ -44,4 +44,45 @@
 @import "pages/contact";
 
 
+/* ==========================================================================
+   Browse Happy prompt
+   ========================================================================== */
+
+.browsehappy{
+    display: none !important;
+}
+
+.IE .browsehappy {
+    display: block !important;
+    margin: 0.2em 0;
+    background: #eee;
+    color: #000;
+    padding: 5em 3em !important;
+    position: fixed;
+    top: 10%;
+    left: 0;
+    width: 100%;
+    z-index: 2000;
+    font-size: 1.5em;
+    line-height: 1.5;
+    text-align: center;
+    .close{
+        position: absolute ;
+        right: 0.5em;
+        top: 0.5em;
+    }
+}
+
+.IE._11 .browsehappy,
+.IE._12 .browsehappy
+.IE._13 .browsehappy{
+    display: none !important;
+}
+
+.IE.warning-dismissed .browsehappy{
+    display: none !important;
+}
+
+
+
 

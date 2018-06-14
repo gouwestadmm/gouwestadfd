@@ -1,18 +1,17 @@
 
-
 .btn-0 {
 	position: relative;
   	overflow: hidden;
-  	transition: 0.25s all;
+  	transition: 0.35s all;
   	padding-left: 0;
 
   	span,
   	.btn-text{
   		position: relative;
   		z-index: 3;
-  		transition: 0.25s all cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  		transition: 0.35s all cubic-bezier(0.68, -0.55, 0.265, 1.55);
   	}
-  	.fa{
+  	.fa, .fal{
   		position: absolute;
   		left: 0; 
   		top: 50%;
@@ -25,30 +24,31 @@
 	    content: '';
 	    position: absolute;
 	    top: 0;
-	    left: 0;
 	    right: 0;
 	    bottom: 0;
-	    background-color: fade-out($brand-primary, 0.8);
-	    transform: translateX(-100%);
-	    transition: 0.25s all cubic-bezier(0.68, -0.55, 0.265, 1.55);
+	    background-color: fade-out($brand-primary, 0.88);
+	    width: 0;
+	    transition: 0.35s all ease-out;
 	    z-index: 1;
 	  }
 
 	  &:hover {
 	  	margin-left: -1em;
-	  	padding-left: 3em;
+	  	padding-left: 2em;
 	  	transition: 0.35s all cubic-bezier(0.68, -0.55, 0.265, 1.55);
 	    &:before {
-	      transform: translateX(-25%);
-	      transition: 0.35s all cubic-bezier(0.68, -0.55, 0.265, 1.55);
+	      width: 100%;
+	      left: 0;
+	      transition: 0.35s all ease-in;
 	    }
 	    .btn-text{
-	    	transform: translateX(25%);
-	    	transition: 0.25s all cubic-bezier(0.68, -0.55, 0.265, 1.55);
+	    	transform: translateX(20%);
+	    	transition: 0.35s all cubic-bezier(0.68, -0.55, 0.265, 1.55);
 	    }
 	    .fa{
 	    	left: 0.5em;
-	    	transition: 0.25s all cubic-bezier(0.68, -0.55, 0.265, 1.55);
+	    	transition: 0.35s all cubic-bezier(0.68, -0.55, 0.265, 1.55);
 	    }
-	  }
+	}
 }
+

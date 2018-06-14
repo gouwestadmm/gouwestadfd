@@ -9,6 +9,12 @@
 		padding-top: $spacer * 3;
 		padding-bottom: $spacer * 3;
 	}
+	@include media-breakpoint-down(sm){
+		.nav-item{
+			flex-basis: 100%;
+			width: 100%;
+		}
+	}
 	display: flex;
 	align-items: center;
 	justify-content: center;

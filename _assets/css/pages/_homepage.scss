@@ -18,8 +18,8 @@
 	background-size: 100vw auto;
 	background-position: bottom left;
 	@include media-breakpoint-down(sm){
-		background-position: bottom center;
-		background-size: 155vw auto;
+		background-position: left -20vw center;
+		background-size: cover;
 	}
 }
 
