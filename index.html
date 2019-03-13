@@ -6,20 +6,31 @@ body_class: home
 event-banner: true
 ---
 
-<header class="homepage-header py-3 w-100 d-flex position-relative">
-	<div class="background-image homepage-hero-image data-image">
-		<img class="img-fluid" src="{{ page.image }}">
-	</div>
-	<div class="image-overlay light"></div>
-	<div class="container-fluid container-wide d-flex flex-wrap">
-		<div class="row align-self-end mt-3 mb-5 pb-xl-4">
-			<div class="col-12 site-slogan measure-wide">
-				<h1 class="">De leukste <strong class="text-primary">weg</strong> naar vertrouwd <strong class="text-primary">advies</strong></h1>
+
+<div class="mt-2 pt-lg-2 px-0 position-relative container-wide to-edge to-edge-left">
+	<div class="aspect-ratio-1-1 aspect-ratio-sm-16-9 aspect-ratio-lg-21-9 homepage-header-image mb-3 mb-lg-5 to-egde to-edge-right z-1">
+
+		<img class="img-fluid img-fit background-image" src="{{ page.image }}">
+		<div class="image-overlay light-vert"></div>
+
+		<div class="image-attention-block image-attention-block-bottom custom-attention-block bg-primary text-white p-3">
+			<h2><i class="fal fa-newspaper"></i></h2>
+			<p class="small">Nieuw:</p>
+		 	<p class="lead">Een custom digitaal magazine waarbij het om de inhoud gaat.</p>
+		 	<p><a class="hover-underline strong" href="magazine"><i class="fal fa-angle-right text-primary"></i> <span class="pl-2">lees meer</span></a></p>
+		</div>
+
+		<div class="home-header-content mt-2 mt-lg-5 pt-4 pb-2 pt-lg-5 position-absolute z-5 site-slogan">
+			<div class="measure-ultra-wide z-5">
+				<h1 class="">
+					De leukste <strong class="text-primary">weg</strong>
+					naar vertrouwd <strong class="text-primary">advies</strong>
+				</h1>
 				<h4 class="">De financieel adviseur voor Waddinxveen en omstreken</h4>
 			</div>
 		</div>
 	</div>
-</header>
+</div>
 
 <div class="quick-links bg-light">
 	<div class="container-narrow">
@@ -61,12 +72,12 @@ event-banner: true
 		</div>
 		<div class="row">
 			<div class="col-sm-4 col-lg-3 mb-4">
-				<p><strong>Een huis is geen broodje</strong></p>
+				<p><i class="fal fa-truck-couch"></i> <strong>Een huis is geen broodje</strong></p>
 				<p>Een nieuwe woning kopen is zonder enige twijfel één van de grootste stappen in je leven. Dat is een stap die je weloverwogen moet nemen.</p>
 				<a class="mt-2 btn btn-0" href="/hypotheek"><strong><span class="fa fa-angle-right"></span><span class="btn-text pl-2">Hypotheken</span></strong></a>
 			</div>
 			<div class="col-sm-4 col-lg-3 mb-4">
-				<p><strong>Om te beschermen wat je lief is</strong></p>
+				<p><i class="fal fa-car"></i> <strong>Om te beschermen wat je lief is</strong></p>
 				<p>Verzekeren doe je niet alleen omdat het moet, maar omdat je wilt beschermen wat je lief is.</p>
 				<a class="mt-2 btn btn-0" href="/verzekeringen"><strong><span class="fa fa-angle-right"></span><span class="btn-text pl-2">Verzekeringen</span></strong></a>
 			</div>

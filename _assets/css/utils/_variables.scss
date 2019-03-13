@@ -167,7 +167,7 @@ $enable-print-styles:       true !default;
 // variables. Mostly focused on spacing.
 // You can add more entries to the $spacers map, should you need more variation.
 
-$spacer: 1.5rem !default;
+$spacer: 1.5em !default;
 $spacers: (
   0: 0,
   1: ($spacer * .25),
@@ -264,9 +264,9 @@ $line-height-sm:         1.67 !default;
 $border-width: 1px !default;
 $border-color: $gray-200 !default;
 
-$border-radius:          .25rem !default;
-$border-radius-lg:       .3rem !default;
-$border-radius-sm:       .2rem !default;
+$border-radius:          .25em !default;
+$border-radius-lg:       .3em !default;
+$border-radius-sm:       .2em !default;
 
 $component-active-color: $white !default;
 $component-active-bg:    theme-color("primary") !default;

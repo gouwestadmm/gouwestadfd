@@ -4,13 +4,20 @@
 # 3. config.yml
 
 name: gouwestadfd 
-description: Gouwestad FD
-url: http://www.gouwestadfd.nl
+url: https://www.gouwestadfd.nl
 author:
   name: Gouwestad Marketing en Media
   email: lex@gouwestad.com
 
 include: ['.htaccess']
+
+
+# Jekyll SEO
+
+title: Gouwestad Financiële Diensten 
+description: De onafhankelijk financieel adviseur van Waddinxveen en omstreken. Bij ons kun je terecht voor hypotheken en verzekeringen waarbij persoonlijke aandacht voorop staat.
+
+
 
 # -----
 # Build
@@ -21,7 +28,6 @@ assets:
   digest: true
 
 plugins:
-  - jekyll-archives
   - jekyll-sitemap
   - jekyll-seo-tag
   - jekyll-feed

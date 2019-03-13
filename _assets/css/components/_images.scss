@@ -1,5 +1,19 @@
 
 
+//
+// IMAGES
+//
+
+.img-fit{
+	object-fit: cover;
+	object-position: 50% 50%;
+}
+
+.img-contain{
+	object-fit: contain;
+}
+
+
 .data-image{
 	img{
 		display: none;
@@ -102,7 +116,44 @@
  	@include media-breakpoint-up(lg){
  		right: 8rem;
  		top: -3em;
+ 		mask-image: url(/img/logo-mark.svg);
+	    mask-size: cover;
+	    -webkit-mask-image: url(/img/logo-mark.svg);
+	    -webkit-mask-size: cover;
+	    margin-top: -3em;
+	    padding-top: 5em !important;
  	}
+ 	@include media-breakpoint-up(xl){
+ 		max-width: 25vw;
+ 	}
+ }
+
+.image-attention-block-left{
+ 	right: auto;
+ 	left: $spacer;
+ 	@include media-breakpoint-up(md){
+       	left: 8rem;
+    }
+ }
+
+ .image-attention-block-left-bottom{
+ 	right: auto;
+ 	left: 0;
+ 	@include media-breakpoint-up(lg){
+ 		left: -3rem;
+ 	}
+ 	top: auto;
+ 	bottom: $spacer;
+ }
+
+  .image-attention-block-left-top{
+ 	right: auto;
+ 	left: 0;
+ 	@include media-breakpoint-up(lg){
+ 		left: -3rem;
+ 	}
+ 	bottom: auto;
+ 	top: $spacer;
  }
 
 

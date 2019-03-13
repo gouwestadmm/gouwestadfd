@@ -54,13 +54,13 @@ section{
 
     .to-edge.to-edge-right{
       @include media-breakpoint-up(sm){
-        margin-right: calc(-16vw - #{$spacer}); // container-narrow 12rem + 2 rem padding
+        margin-right: 0; // container-narrow 12rem + 2 rem padding
       }
     }
 
     .to-edge.to-edge-left{
       @include media-breakpoint-up(sm){
-        margin-left: calc(-16vw - #{$spacer}); // container-narrow 12rem + 2 rem padding
+        margin-left: 0; // container-narrow 12rem + 2 rem padding
       }
     }
 }
@@ -81,13 +81,13 @@ section{
 
     .to-edge.to-edge-right{
       @include media-breakpoint-up(sm){
-        margin-right: -8vw; // container-narrow 12rem + 2 rem padding
+        margin-right: 0; // container-narrow 12rem + 2 rem padding
       }
     }
 
     .to-edge.to-edge-left{
       @include media-breakpoint-up(sm){
-        margin-left: calc(-8vw - #{$spacer}); // container-narrow 12rem + 2 rem padding
+        margin-left: 0; // container-narrow 12rem + 2 rem padding
       }
     }
 }
@@ -166,54 +166,38 @@ $v-sizes: (
 
 
 //
-// Aspect ratios
+// ASPECT RATIO'S
 //
 
-@mixin aspect-ratio($width, $height) {
-    position: relative;
-    &:before{
-        display: block;
-        content: " ";
-        width: 100%;
-        padding-top: ($height / $width) * 100%;
-    }
-    > .intrinsic-ratio--stretch {
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-    }
-}
+$aspects: () !default;
+$aspects: (
+    '24-9': 9/24,
+    '21-9': 9/21,
+    '16-9': 9/16,
+    '3-2': 2/3,
+    '2-1': 1/2,
+    '1-1': 1/1,
+    '1-2': 2/1,
+);
 
-// 1:1
-.aspect-ratio-1-1 {
-    @include aspect-ratio(1, 1);
-}
-.aspect-ratio-1-2 {
-    @include aspect-ratio(1, 1.33);
-}
-.aspect-ratio-16-9 {
-    @include aspect-ratio(16, 9);
-}
-.aspect-ratio-21-9 {
-    @include aspect-ratio(21, 9);
+@each $breakpoint in map-keys($grid-breakpoints) {
+    @include media-breakpoint-up($breakpoint) {
+        $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
 
-}
-.aspect-ratio-24-9 {
-    @include aspect-ratio(24, 9);
-    @include media-breakpoint-down(sm){
-      @include aspect-ratio(1, 1);
+        @each $name, $aspect in $aspects {
+
+            .aspect-ratio#{$infix}-#{$name} { 
+                position: relative;
+                &:before{
+                    display: block;
+                    content: " ";
+                    width: 100%;
+                    padding-top: ($aspect) * 100%;
+                }
+            }
+
+        }
     }
-}
-.aspect-ratio-3-2{
-  @include aspect-ratio(3, 2);
-}
-.aspect-ratio-3-1{
-  @include aspect-ratio(3, 1);
-}
-.aspect-ratio-4-3{
-  @include aspect-ratio(4, 3);
 }
 
 
