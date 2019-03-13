@@ -31,13 +31,13 @@ section{
 
 .to-edge.to-edge-right{
   @include media-breakpoint-up(sm){
-    margin-right: calc(-16vw - #{$spacer}); // container-narrow 12rem + 2 rem padding
+    margin-right: 0; // container-narrow 12rem + 2 rem padding
   }
 }
 
 .to-edge.to-edge-left{
   @include media-breakpoint-up(sm){
-    margin-left: calc(-16vw - #{$spacer}); // container-narrow 12rem + 2 rem padding
+    margin-left: 0; // container-narrow 12rem + 2 rem padding
   }
 }
 

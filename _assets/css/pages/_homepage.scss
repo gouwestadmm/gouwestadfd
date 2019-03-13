@@ -50,6 +50,19 @@
 	}
 }
 
+.home-header-content{
+	bottom: 0;
+	left: 0;
+	margin-left: $spacer;
+	margin-bottom: $spacer;
+	@include media-breakpoint-up(xl){
+        margin-left: 6vw;
+    }
+    @include media-breakpoint-up(s-xl){
+        margin-left: 8vw;
+    }
+}
+
 
 
 .homepage-about{
