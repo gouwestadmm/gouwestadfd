@@ -58,9 +58,15 @@
 
 				  	<input type="hidden" name="_to" value="lex@gouwestad.com">
 				  	<input type="text" name="_gotcha" style="display: none;">
-				  	<div class="g-recaptcha" data-sitekey="6LeC_AgUAAAAACddgFbj9d6mN6-FZfkXXfhfbbvN"></div>
+
+					<div class="g-recaptcha"
+				       data-sitekey="6LeC_AgUAAAAACddgFbj9d6mN6-FZfkXXfhfbbvN"
+				       data-callback="onSubmit"
+				       data-size="invisible">
+				  </div>
 						
 					<input type="submit" value="Send Message">
+
 		        </form>
 		        <div id="cf-context" class="cf-form-holder col-12 dark-theme mx-auto px-0 px-sm-2 px-xl-5 " role="cf-context" cf-context></div>
 		        <div class="col-12 px-sm-2 px-xl-5">
@@ -71,6 +77,7 @@
       </div>
   </div><!-- contact form section-->
 
+<script src="https://www.google.com/recaptcha/api.js?onload=onLoad&render=explicit" async defer />
 
 <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/space10-community/conversational-form@0.9.90/dist/conversational-form.min.js" crossorigin></script>
 
@@ -125,40 +132,28 @@
 	};
 
 
-	// Helper function to get form data in the supported format
-	function getFormDataString(formEl) {
-	  var formData = new FormData(formEl),
-	      data = [];
-
-	  for (var keyValue of formData) {
-	    data.push(encodeURIComponent(keyValue[0]) + "=" + encodeURIComponent(keyValue[1]));
-	  }
-
-	  return data.join("&");
-	}
-
-	// Fetch the form element
-	var formEl = document.getElementById("contact-form");
-
-	// Override the submit event
-	formEl.addEventListener("submit", function (e) {
-	  e.preventDefault();
-
-	  var request = new XMLHttpRequest();
-
-	  request.addEventListener("load", function () {
-	    if (request.status === 302) { // CloudCannon redirects on success
-	      // It worked
-	    }
-	  });
-
-	  request.open(formEl.method, formEl.action);
-	  request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-	  request.send(getFormDataString(formEl));
-	});
-
 })(jQuery);
 	
+</script>
+
+<script type="text/javascript">
+      function onSubmit(token) {
+	    alert('thanks ' + document.getElementById('field').value);
+	  }
+
+	  function validate(event) {
+	    event.preventDefault();
+	    if (!document.getElementById('email').value) {
+	      alert("Vul een email adres in");
+	    } else {
+	      grecaptcha.execute();
+	    }
+	  }
+
+	  function onload() {
+	    var element = document.getElementById('submit');
+	    element.onclick = validate;
+	  }
 </script>
 
 <div class="contact-attention-section">
