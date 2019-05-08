@@ -90,6 +90,7 @@
 	        robotImage: "/img/logo-mark.svg",
 	        submitCallback: function() {
                	grecaptcha.execute();
+               	function onSubmit(token) {
 		           $.ajax({
 			            type: 'post',
 			            url: '#',
@@ -104,6 +105,7 @@
 			              	console.log("form send");
 			            }
 			        });
+		        }
 	    	},
 		    dictionaryData: {
 		        "entry-not-found": "We hebben je invoer niet gevonde",
@@ -136,27 +138,6 @@
 })(jQuery);
 	
 </script>
-
-<script type="text/javascript">
-      function onSubmit(token) {
-	    alert('thanks ' + document.getElementById('email').value);
-	  }
-
-	  function validate(event) {
-	    event.preventDefault();
-	    if (!document.getElementById('email').value) {
-	      alert("Vul een email adres in");
-	    } else {
-	      grecaptcha.execute();
-	    }
-	  }
-
-	  function onload() {
-	    var element = document.getElementById('submit');
-	    element.onclick = validate;
-	  }
-</script>
-
 
 
 <div class="contact-attention-section">
