@@ -37,26 +37,27 @@
   					<cf-robot-message cf-questions="Als je hier je gegevens invult, dan nemen wij zo snel mogelijk contact met je op"></cf-robot-message>
 
 		        	<div class="form-group mb-3 mb-xl-4">
-		        		<label class="label form-control-label" for="name">Naam:</label>
-		          		<input class="form-control" type="text" name="message_name" cf-input-placeholder="Vul je naam in?" cf-questions="Wat is je naam?" id="naam" value="">
+		        		<label class="label form-control-label" for="Naam">Naam:</label>
+		          		<input class="form-control" type="text" name="Naam" cf-input-placeholder="Vul je naam in?" cf-questions="Wat is je naam?" id="naam" value="">
 		          	</div>
 
 		          	<div class="form-group mb-3 mb-xl-4">
-		          		<label class="label form-control-label" for="message_email">Email:</label>
-		          		<input class="form-control" type="email" name="message_email" cf-input-placeholder="Vul je emailadres in?" cf-questions="Dag {naam}. Wat is je emailadres?" value="" required>
+		          		<label class="label form-control-label" for="Email">Email:</label>
+		          		<input class="form-control" type="email" name="Email" cf-input-placeholder="Vul je emailadres in?" cf-questions="Dag {naam}. Wat is je emailadres?" value="" required>
 		          	</div>
 
 		          	<div class="form-group mb-3 mb-xl-4">
-		          		<label class="form-control-label" for="message_phone">Telefoonnummer:</label>
-		          		<input class="form-control" type="text" name="message_phone" cf-input-placeholder="Vul je telefoonnummer in" cf-questions="En op welk telefoonnummer kunnen we je bereiken?" value="" required>
+		          		<label class="form-control-label" for="Telefoonnummer">Telefoonnummer:</label>
+		          		<input class="form-control" type="text" name="Telefoonnummer" cf-input-placeholder="Vul je telefoonnummer in" cf-questions="En op welk telefoonnummer kunnen we je bereiken?" value="" required>
 		          	</div>
 
 		          	<div class="form-group mb-3 mb-xl-4">
-		          		<label class="form-control-label" for="message_text">Bericht:</label>
-		          		<textarea class="form-control" name="message_text" cf-questions="Waarvoor wil je langskomen? Gaat het bijvoorbeeld om een hypotheek of wil je je verzekeringen laten doorlichten?" rows="5"></textarea>
+		          		<label class="form-control-label" for="Bericht">Bericht:</label>
+		          		<textarea class="form-control" name="Bericht" cf-questions="Waarvoor wil je langskomen? Gaat het bijvoorbeeld om een hypotheek of wil je je verzekeringen laten doorlichten?" rows="5"></textarea>
 		          	</div>
 
 				  	<input type="hidden" name="_to" value="lex@gouwestad.com">
+				  	<input type="hidden" name="_subject" value="Contactaanvraag via Gouwestad FD website">
 				  	<input type="text" name="_gotcha" style="display: none;">
 
 					<div class="g-recaptcha"
