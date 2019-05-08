@@ -246,6 +246,21 @@ function onSubmit(token) {
     });
 }
 
+function onSubmitContact(token) {
+   $.ajax({
+        type: 'post',
+        url: '#',
+        data: $('#contact-form').serialize(),
+        success: function () {
+            var $el = $("#contact-confirmation");
+            setTimeout(function () {
+                $el.addClass('active');
+            }, 1000);
+            console.log("form send");
+        }
+    });
+}
+
 window.onload = function() {
     var conversationalForm = window.cf.ConversationalForm.startTheConversation({
         formEl: document.getElementById("bezichtiging-form"),

@@ -6,6 +6,16 @@ layout: default
 
 <div class="page-holder page-holder-contact container-fluid p-a-0">
 
+	<div class="bezichtiging-confirmation bg-primary" id="contact-confirmation">
+		<div class="confirmation-content px-3 py-3 story story-centered">
+			<h2>Bedankt voor je aanvraag</h2>
+			<h4>We nemen zo snel mogelijk contact met je op!</h4>
+			<div class="mt-5 text-right">
+				<a class="btn btn-outline-light" href="/">Terug naar de homepage</a>
+			</div>
+		</div>
+	</div>
+
 	<main class="main-contact">
 		<section class="contact-intro">
 			<div class="container-narrow">
@@ -58,37 +68,34 @@ layout: default
 						<form method="post" action="/" id="contact-form">
 
 							<div class="form-group">
-								<input type="text" class="form-control" name="naam" id="naam" placeholder="je naam" required="required" />
+								<input type="text" class="form-control" name="Naam" id="naam" placeholder="je naam" required="required" />
 								<label class="form-label" for="name">Je naam</label>
 							</div>
 
 							<div class="form-group">
-								<input type="email" name="email" class="form-control" id="email" placeholder="Je email adres" required="required" />
+								<input type="email" name="Email" class="form-control" id="email" placeholder="Je email adres" required="required" />
 								<label class="form-label" for="email">email adres</label>
 							</div>
 
 							<div class="form-group">
-								<input type="text" class="form-control" name="telefoonnummer" id="telefoonnummer" placeholder="Je telefoonnummer" required="required" />
+								<input type="text" class="form-control" name="Telefoonnummer" id="telefoonnummer" placeholder="Je telefoonnummer" required="required" />
 								<label class="form-label" for="telefoonnummer">je telefoonnummer</label>
 							</div>
 							
 							<div class="form-group">
 								<label for="name">Je bericht</label>
-								<textarea name="message" id="message" class="form-control" rows="9" cols="25" required="required" placeholder="bericht"></textarea>
+								<textarea name="Bericht" id="message" class="form-control" rows="9" cols="25" required="required" placeholder="bericht"></textarea>
 							</div>
 
 							<input type="hidden" name="_to" value="info@gouwestad.com">
 							<input type="hidden" name="_cc" value="info@gouwestadfd.nl">
+							<input type="hidden" name="_subject" value="Contactaanvraag via Gouwestad FD website">
  							<input type="text" name="_gotcha" style="display: none;">
-	 						 <div class="form-group row">
-	 						 	<div class="col-sm-12">
-	 						 		<div class="g-recaptcha" data-sitekey="6LeC_AgUAAAAACddgFbj9d6mN6-FZfkXXfhfbbvN"></div>
-	 						 	</div>
-	 						 </div>
+	 
 
 						  <div class="form-group row text-xs-right">
 						    <div class="col-sm-12">
-						      <button type="submit" class="btn btn-primary">Verzenden</button>
+						      <button class="g-recaptcha" data-sitekey="6LcJc6IUAAAAANTZ-ABvRhQctVRerBLQ65vs4Da4" data-callback='onSubmitContact'>Verzenden</button>
 						    </div>
 						  </div>
 						</form>
@@ -99,48 +106,6 @@ layout: default
 
 	</main>
 </div>
-
-
-<script>
-	// Helper function to get form data in the supported format
-	function getFormDataString(formEl) {
-	  var formData = new FormData(formEl),
-	      data = [];
-
-	  for (var keyValue of formData) {
-	    data.push(encodeURIComponent(keyValue[0]) + "=" + encodeURIComponent(keyValue[1]));
-	  }
-
-	  return data.join("&");
-	}
-
-	// Fetch the form element
-	var formEl = document.getElementById("contact-form");
-
-	// Override the submit event
-	formEl.addEventListener("submit", function (e) {
-	  e.preventDefault();
-
-	  if (grecaptcha) {
-	    var recaptchaResponse = grecaptcha.getResponse();
-	    if (!recaptchaResponse) { // reCAPTCHA not clicked yet
-	      return false;
-	    }
-	  }
-
-	  var request = new XMLHttpRequest();
-
-	  request.addEventListener("load", function () {
-	    if (request.status === 302) { // CloudCannon redirects on success
-	      // It worked
-	    }
-	  });
-
-	  request.open(formEl.method, formEl.action);
-	  request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-	  request.send(getFormDataString(formEl));
-	});
-</script>
 
 
 
