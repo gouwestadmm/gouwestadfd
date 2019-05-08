@@ -77,28 +77,7 @@
       </div>
   </div><!-- contact form section-->
 
-  <script type="text/javascript">
-      function onSubmit(token) {
-	    alert('thanks ' + document.getElementById('field').value);
-	  }
 
-	  function validate(event) {
-	    event.preventDefault();
-	    if (!document.getElementById('email').value) {
-	      alert("Vul een email adres in");
-	    } else {
-	      grecaptcha.execute();
-	    }
-	  }
-
-	  function onload() {
-	    var element = document.getElementById('submit');
-	    element.onclick = validate;
-	  }
-</script>
-
-
-<script>onload();</script>
 
 <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/space10-community/conversational-form@0.9.90/dist/conversational-form.min.js" crossorigin></script>
 
@@ -155,6 +134,26 @@
 
 })(jQuery);
 	
+</script>
+
+<script type="text/javascript">
+      function onSubmit(token) {
+	    alert('thanks ' + document.getElementById('email').value);
+	  }
+
+	  function validate(event) {
+	    event.preventDefault();
+	    if (!document.getElementById('email').value) {
+	      alert("Vul een email adres in");
+	    } else {
+	      grecaptcha.execute();
+	    }
+	  }
+
+	  function onload() {
+	    var element = document.getElementById('submit');
+	    element.onclick = validate;
+	  }
 </script>
 
 
