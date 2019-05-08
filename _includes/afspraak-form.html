@@ -101,6 +101,9 @@
 					  return data.join("&");
 					}
 
+					// Fetch the form element
+					var formEl = document.getElementById("bezichtiging-form");
+
 					// Override the submit event
 					formEl.addEventListener("submit", function (e) {
 					  e.preventDefault();
